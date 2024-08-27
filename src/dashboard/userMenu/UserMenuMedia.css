@@ -1,0 +1,179 @@
+@media screen and (max-width: 900px) {
+  .user-dashboard-body {
+    flex-direction: column;
+  }
+  .mobile_menu{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.489);
+    position: absolute;
+    left: 0px;
+    top: 0%;
+    z-index: 100;
+    animation: slideIn 350ms ease-in-out;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .user-dashboard-left-container {
+    display: none;
+  }
+
+  .user-left-container-media {
+    width: 100%;
+    height: 10%;
+    /* background: #a67b7b; */
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 20px;
+  }
+
+  .dashboard-hamburger-wrapper {
+    width: 14%;
+    height: 50%;
+    /* background-color: red; */
+  }
+  .dashboard-hamburger-menu{
+    width: 100%;
+    height: 100%;
+  }
+
+  .user-left-menu-wrapper-media{
+    width: 70%;
+    height: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid gold;
+  }
+
+  .user-left-menu-logo-wrapper-media {
+    width: 100%;
+    height: 15%;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .user-left-menu-logo-container-media {
+    width: 40%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-left-menu-logo-container-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .close_menu{
+    width: 20%;
+    height: 35%;
+    /* background-color: yellow; */
+    font-size: 20px;
+    color: gold;
+  }
+  .user-dashboard-deposit-wallet-container{
+    padding: 15px;
+  }
+
+  .user-dashboard-left-body-menu-media {
+    width: 100% !important;
+    height: 90%;
+    /* background: cyan; */
+  }
+
+  .user-dashboard-left-body-menu {
+    width: 100%;
+    /* height: 60%; */
+    /* background: rgb(23, 81, 190); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .user-dashboard-left-menu-dashboard,
+  .user-dashboard-left-investment-dashboard,
+  .user-dashboard-left-menu-deposit,
+  .user-dashboard-left-menu-withdraw,
+  .user-dashboard-left-body-menu-transaction,
+  .user-dashboard-left-menu-changePassword {
+    width: 100%;
+    height: 13%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(158, 158, 158);
+  }
+
+  .user-dashboard-left-menu-dashboard-active,
+  .userdashboardleftmenuinvestment-active,
+  .user-dashboard-left-menu-deposit-active,
+  .user-dashboard-left-menu-withdraw-active,
+  .user-dashboard-left-menu-transaction-active,
+  .user-dashboard-left-menu-changePassword-active {
+    padding-left: 10px;
+  }
+
+  .user-dashboard-menu-icon,
+  .user-dashboard-menu-investment-icon,
+  .user-dashboard-menu-deposit-icon,
+  .user-dashboard-menu-withdraw-icon,
+  .user-dashboard-menu-changePassword-icon {
+    font-size: 18px;
+  }
+
+  .user-dashboard-right-container {
+    width: 100%;
+    height: 90%;
+    /* background: cyan; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-dashboard-profile-container {
+    width: 100%;
+    height: 10%;
+    /* background: crimson; */
+    /* border-bottom: 1px solid gray; */
+  }
+
+  .user-dashboard-menu-content-container {
+    width: 100%;
+    /* height: 90%; */
+    overflow-y: scroll;
+    /* background: red; */
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 320px) {
+  
+  .user-left-menu-wrapper-media {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 800px) {
+
+  .CardPlan-Container-Main:hover {
+    transform: none;
+  }
+  .CardPlan-Container {
+    width: 100%;
+    height: auto;
+    /* background-color: red !important; */
+  }
+  .CardPlan-title {
+    /* background-color: aqua; */
+    gap: 20px;
+  }
+  .CardPlan-title img {
+    /* width: 20%; */
+    height: 50px !important;
+  }
+  .CardPlan-title h4 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+  }
+
+}
+

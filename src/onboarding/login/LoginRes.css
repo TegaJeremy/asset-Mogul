@@ -1,0 +1,29 @@
+@media (max-width: 575px) {
+  .Login_PageWrapper {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .LoginInput_Wrapper {
+    width: 95%;
+    /* height: 65%; */
+  }
+
+  .Login_Buttons {
+    gap: 3px;
+  }
+
+  .Forgot_Span {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media screen and (max-width: 800px){
+
+  .Login_Page{
+    height: 100vh;
+  }
+
+}
