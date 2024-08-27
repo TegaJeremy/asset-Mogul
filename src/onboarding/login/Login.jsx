@@ -50,7 +50,7 @@ const Login = () => {
         formData.append("password", password);
 
         const response = await axios.post(
-          "https://naxtrotradebackup.onrender.com/login",
+          "https://asset-mogul-back.onrender.com/login",
           { emailOrUserName: emailOrUser, password: password }
         );
         console.log(response);

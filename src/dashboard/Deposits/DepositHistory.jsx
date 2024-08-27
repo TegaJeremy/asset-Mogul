@@ -14,7 +14,7 @@ function DepositHistory({ user }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://naxtrotradebackup.onrender.com/DepositHistory/${user._id}`
+        `https://asset-mogul-back.onrender.com/DepositHistory/${user._id}`
       );
       setLoading(false);
       console.log(response);

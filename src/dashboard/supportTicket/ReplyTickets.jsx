@@ -42,7 +42,7 @@ function ReplyTickets() {
       formData.append("pictures ", p1);
       try {
         const response = await axios.post(
-          `https://naxtrotradebackup.onrender.com/replyToTicket/${id}`,
+          `https://asset-mogul-back.onrender.com/replyToTicket/${id}`,
           formData
         );
         console.log(response);

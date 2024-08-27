@@ -23,7 +23,7 @@ const Transaction = () => {
     async function getTransactionHistory() {
       try {
         const response = await axios.get(
-          `https://naxtrotradebackup.onrender.com/getTransactionHistory/${id}`
+          `https://asset-mogul-back.onrender.com/getTransactionHistory/${id}`
         );
         console.log(response);
         toast?.success(response?.data?.message);

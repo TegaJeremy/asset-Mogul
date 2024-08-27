@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   const [loading, setloading] = useState(false);
   const [email, setEmail] = useState("");
   const nav = useNavigate();
-  const url = `https://naxtrotradebackup.onrender.com/forgotPassword`;
+  const url = `https://asset-mogul-back.onrender.com/forgotPassword`;
 
   const sendMailForPassword = async () => {
     if (!email.trim()) {
