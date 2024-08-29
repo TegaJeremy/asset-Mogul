@@ -75,18 +75,19 @@
 }
 
 .menuactive{
-  color: #fff;
+  color: rgb(95, 95, 247);
   background-color: black;
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgb(95, 95, 247);
 }
 
 .menunotactive{
-  color: gold;
+  color: #fff;
   transition: all ease 0.91s;
 }
 
 .menunotactive:hover {
-  color: #fff;
+  color: rgb(95, 95, 247);
   background-color: black;
   padding: 0.5rem 1rem;
 }
@@ -106,7 +107,7 @@
 }
 
 .navLinks a {
-  color: gold;
+  color: rgb(79, 79, 242);
 }
 
 .home-header-create-acct-span {
