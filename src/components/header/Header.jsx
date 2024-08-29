@@ -39,21 +39,6 @@ const Header = () => {
   return (
     <>
       <div className="home-widget-homeMenu-holder">
-        {/* <div className="home-widget">
-          <div className="home-widget-wrapper">
-            <TradingViewWidget />
-            <script
-              defer
-              src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>{" "}
-            <div
-              className="livecoinwatch-widget-5"
-              lcw-base="USD"
-              lcw-color-tx="#999999"
-              lcw-marquee-1="coins"
-              lcw-marquee-2="movers"
-              lcw-marquee-items="10"></div>
-          </div>
-        </div> */}
         <div className="home-header-container">
           <div className="home-header-wrapper">
             <div className="home-header-wrapper-logo">

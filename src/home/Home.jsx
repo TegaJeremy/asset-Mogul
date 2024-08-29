@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import "./HomeMedia.css";
 import CardPlan from "./CardPlan";
-import ImgHomeSec4 from "./images/HomeSection4Img.png";
+import ImgHomeSec4 from "../assets/First.jpg";
 // import citadelHomeLogo from "../assets/citadel1.png";
 import mobilePhone from "../assets/phone.png";
-
-
+import home2image from "../assets/Second.webp";
 // transfer payment method
 import bitCoin from "../assets/bitcoin.gif";
 import bitCoinCash from "../assets/bitcoincash.gif";
@@ -21,70 +20,54 @@ import payeer from "../assets/payeer.gif";
 import ethereum from "../assets/ethereum.gif";
 import tetherusdttrc20token from "../assets/tetherusdttrc20token.gif";
 import { motion, stagger } from "framer-motion";
-import citadel1 from "../assets/citadel1.png";
-import Hero from "./Hero";
 import { useNavigate } from "react-router-dom";
+import { SlChart } from "react-icons/sl";
+import { LiaChessBishopSolid } from "react-icons/lia";
+import { GrSecure } from "react-icons/gr";
+import { FaCoins } from "react-icons/fa";
+
 
 const Home = () => {
 
   const navigate = useNavigate()
-  // const [widgetLoaded, setWidgetLoaded] = useState(false);
-  // useEffect(() => {
-  //     const script = document.createElement('script');
-  //     script.type = 'text/javascript';
-  //     script.async = true;
-  //     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
-  //     script.onload = () => {
-  //         setWidgetLoaded(true);
-  //     };
-  //     document.body.appendChild(script);
-
-  //     return () => {
-  //         document.body.removeChild(script);
-  //     };
-  // }, []);
-  // const images = [image1, image2, image3];
-  const images = [
-    { url: "../../public/investPhoto1.jpg" },
-    { url: "../../public/investPhoto2.jpg" },
-    { url: "../../public/investPhoto3.jpg" },
-    { url: "../../public/investPhoto4.jpg" },
-  ];
-
-  const pageAnimationY = {
-    initial: {
-      opacity: 0,
-      y: 300,
-    },
-    transition: { type: "spring", stiffness: 40, mass: 1.5 },
-    // animate={{ opacity: 1, y: 0 }}
-    whileInView: {
-      opacity: 1,
-      y: 0,
-    },
-    viewport: { margin: "-40px" },
-  };
-
-  const pageAnimationX = {};
 
   return (
     <>
       <div className="home-body">
-        <div className="hero-holder">
-          <Hero />
+          <motion.div 
+            className='hero_container'
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 30,
+              mass: 1.5,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{ margin: "-40px", once: "true" }}
+          >
+            <h1>The World’s Most Popular Way to Hold, Invest and Trade Crypto.</h1>
+            <p>Buy Bitcoin, Ethereum, and other Leading cryptocurrencies on a platform trusted by millions.</p>
+            <button>Get Started</button>
+          </motion.div>
           <div className="section2-Home">
             <p className="section2-Home-Header">
-              Welcome to Naxtro Tradeplus
+              Welcome to Assets mogul
             </p>
             <motion.div className="section2-Home-MainContainer">
               <div className="section2-image-container">
                 <motion.img
-                  src={mobilePhone}
+                  src={home2image}
                   alt="mobilePhone"
                   className="supposed-img"
                   initial={{
                     opacity: 0,
-                    y: 300,
+                    x: -50,
                   }}
                   transition={{
                     type: "spring",
@@ -93,7 +76,7 @@ const Home = () => {
                   }}
                   whileInView={{
                     opacity: 1,
-                    y: 0,
+                    x: 0,
                   }}
                   viewport={{ margin: "-40px", once: "true" }}
                 ></motion.img>
@@ -101,7 +84,7 @@ const Home = () => {
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 300,
+                  x: 50,
                 }}
                 transition={{
                   type: "spring",
@@ -110,7 +93,7 @@ const Home = () => {
                 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                 }}
                 viewport={{ margin: "-40px", once: "true" }}
                 className="section2-txt-container"
@@ -148,6 +131,132 @@ const Home = () => {
                 </p>
               </motion.div>
             </motion.div>
+          </div>
+          <div className='basics_of_investing_body'>
+            <div className="basics_of_investing_container">
+              <div className='basics_of_investing_container_top'>
+                <div className="basics_of_investing_container_top_text">
+                  <h1>Learn the basics of investing</h1>
+                  <p>We teach you the basics and get you started on your investment journey in no time.</p>
+                </div>
+                <button>Start Investing</button>
+              </div>
+              <div className='basics_of_investing_container_bottom'>
+                <motion.div
+                  className="basics_of_investing_card_container"
+                  initial={{
+                    opacity: 0,
+                    y: 50,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 30,
+                    mass: 1.5,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ margin: "-40px", once: "true" }}
+                >
+                  <div className='basics_investing_card_icon'><SlChart/></div>
+                  <h3>Your money is safe with us</h3>
+                  <p>
+                    You trust us with your investments
+                    and we take that very seriously. We
+                    are committed to protecting your
+                    account with the highest standards
+                    of security available.
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="basics_of_investing_card_container"
+                  initial={{
+                    opacity: 0,
+                    y: 50,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 30,
+                    mass: 1.5,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ margin: "-40px", once: "true" }}
+                >
+                  <div className='basics_investing_card_icon'><LiaChessBishopSolid/></div>
+                  <h3>Bank Level Security</h3>
+                  <p>
+                    We use state-of-the-art data
+                    encryption when handling your
+                    financial information and two-factor
+                    authentication (2FA) protection.
+                    We're backed by top financial
+                    market operators and we not only
+                    meet traditional banking security standards, we exceed them.
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="basics_of_investing_card_container"
+                  initial={{
+                    opacity: 0,
+                    y: 50,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 30,
+                    mass: 1.5,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ margin: "-40px", once: "true" }}
+                >
+                  <div className='basics_investing_card_icon'><GrSecure/></div>
+                  <h3>Secure Payments</h3>
+                  <p>
+                    Our payment processor is with the
+                    best renowned global practices
+                    satisfying the highest level of
+                    Security Audit available.
+                  </p>
+                </motion.div>
+                <motion.div 
+                  className="basics_of_investing_card_container"
+                  initial={{
+                    opacity: 0,
+                    y: 50,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 30,
+                    mass: 1.5,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ margin: "-40px", once: "true" }}
+                >
+                  <div className='basics_investing_card_icon'><FaCoins/></div>
+                  <p>
+                    Trading accounts are held by our
+                    partners, a firm duly registered by
+                    the Securities and Exchange
+                    Commission worldwide.
+                  </p>
+                  <p>
+                    SIPC Insured Your US stocks
+                    portfolio is insured by the United
+                    States SIPC up to $500,000.
+                    StartInvesting.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
           </div>
           <div className="section3-Home">
             <div className="section3-Home-Header">
@@ -194,137 +303,54 @@ const Home = () => {
             </motion.div>
           </div>
           <div className="section4_Home">
-            <div className="section4-Home-MainContainer">
+            <motion.div
+              className="section4-Home-MainContainer"
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{ margin: "-40px", once: "true" }}
+            >
               <h1>Independent private digital investment group</h1>
-              <p>
-                We identify and realise untapped potential and build on our
-                collective learnings while pursuing fact-based methods to secure
-                and document our value creation
-              </p>
-              <div className="section4-Home-button">
-                <button onClick={()=>navigate("/about")}>ABOUT US</button>
-              </div>
-            </div>
-            <div className="section4-home-imgContainer">
+                <p>
+                  We identify and realise untapped potential and build on our
+                  collective learnings while pursuing fact-based methods to secure
+                  and document our value creation
+                </p>
+                <div className="section4-Home-button">
+                  <button onClick={()=>navigate("/about")}>ABOUT US</button>
+                </div>
+            </motion.div>
+            <motion.div 
+              className="section4-home-imgContainer"
+              initial={{
+                opacity: 0,
+                x: 50,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{ margin: "-40px", once: "true" }}
+            >
               <img src={ImgHomeSec4} alt="" />
-            </div>
-          </div>
-          <div className="section5-Home">
-            <div className="section5-Home-logoContainer">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: -100,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 30,
-                  mass: 1.5,
-                }}
-                // animate={{ opacity: 1, y: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  //   delay: stagger(0.05),
-                }}
-                viewport={{ once: true }}
-                className="section5-Home-logoContainer-title"
-              >
-                Welcome to Naxtro Tradeplus
-              </motion.div>
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: -100,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 30,
-                  mass: 1.5,
-                }}
-                // animate={{ opacity: 1, y: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  //   delay: stagger(0.05),
-                }}
-                viewport={{ once: true }}
-                className="section5-home-logo-icons"
-              >
-                <img src={bitCoin} alt="bitcoin" />
-                <img src={ethereum} alt="ethereum" />
-                <img src={dash} alt="dash" />
-                <img src={bitCoinCash} alt="bitCoinCash" />
-                <img src={doge} alt="doge" />
-                <img src={litecoin} alt="litecoin" />
-                <img src={pax} alt="pax" />
-                <img src={payeer} alt="payeer" />
-                <img src={tron} alt="tron" />
-                <img src={tetherusdt} alt="tetherusdt" />
-                <img src={tetherusdterc20token} alt="tetherusdterc20token" />
-                <img src={tetherusdttrc20token} alt="tetherusdttrc20token" />
-              </motion.div>
-            </div>
-            <div className="section5-Home-textHolder">
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  x: 100,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 30,
-                  mass: 1.5,
-                }}
-                // animate={{ opacity: 1, y: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  //   delay: stagger(0.05),
-                }}
-                viewport={{ margin: "-10px", once: true }}
-              >
-                Our primary focus is on assets located in Europe, Asia and North
-                America. Our focus is on the cash-flow profile of the asset,
-                underpinned by long contracts. Core sectors include forex
-                market, cryptocurrencies, energy, utilities, transport and
-                telecom. We invest in high quality assets where the governance
-                and structure are well defined and carried out together with
-                best-in-class investment team. We avoid high dependency on
-                market risks via long contractual arrangements and investment
-                structures.
-              </motion.p>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  x: 100,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 30,
-                  mass: 1.5,
-                }}
-                // animate={{ opacity: 1, y: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  //   delay: stagger(0.05),
-                }}
-                viewport={{ margin: "-40px", once: true }}
-              >
-                We invest to create a financial return, while constantly
-                challenging our methods and improving our ability to make an
-                impact. Our values center around intellectual humility, idea
-                meritocracy, and close teamwork with management, experts and the
-                Board, thrusted with an adequate culture and shared vision. Our
-                values center around intellectual humility, idea meritocracy,
-                and close teamwork with management, experts and the Board,
-                thrusted with an adequate culture and shared vision.
-              </motion.p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
     </>
   );
 };
