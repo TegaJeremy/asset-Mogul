@@ -53,7 +53,7 @@ const Home = () => {
           >
             <h1>The World’s Most Popular Way to Hold, Invest and Trade Crypto.</h1>
             <p>Buy Bitcoin, Ethereum, and other Leading cryptocurrencies on a platform trusted by millions.</p>
-            <button>Get Started</button>
+            <button onClick={()=>navigate('/register')}>Get Started</button>
           </motion.div>
           <div className="section2-Home">
             <p className="section2-Home-Header">
