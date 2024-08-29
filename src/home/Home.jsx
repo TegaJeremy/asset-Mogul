@@ -64,7 +64,6 @@ const Home = () => {
                 <motion.img
                   src={home2image}
                   alt="mobilePhone"
-                  className="supposed-img"
                   initial={{
                     opacity: 0,
                     x: -50,

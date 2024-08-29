@@ -1,14 +1,55 @@
 @media screen and (max-width: 768px) {
-  .hero-supposed-container {
+  /* .hero-supposed-container {
     flex-wrap: wrap;
     padding: 3rem 3%;
-  }
+  } */
   .supposed-img-container {
     max-width: 40rem;
   }
 
   .counter-container {
     justify-content: center;
+  }
+
+  .hero_container{
+    padding: 7rem 10px;
+  }
+
+  .hero_container > button{
+    width: 70%;
+  }
+
+  .section2-image-container{
+    width: 100%;
+  }
+
+  .basics_of_investing_body{
+    padding: 1rem 10px;
+  }
+
+  .basics_of_investing_container{
+    padding: 3rem 10px;
+  }
+
+  .basics_of_investing_container_top{
+    flex-direction: column;
+  }
+
+  .basics_of_investing_container_top_text > h1{
+    font-size: 1.8rem;
+    line-height: 38px;
+  }
+  .basics_of_investing_container_top_text > p{
+    line-height: 28px;
+  }
+
+  .basics_of_investing_container_bottom{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .basics_of_investing_card_container{
+    width: 100%;
   }
 
 }
@@ -21,7 +62,7 @@
   .section2-Home {
     /* background-color: blue; */
     gap: 5px;
-    margin-top: 700px;
+    /* margin-top: 700px; */
   }
   .section2-Home-MainContainer {
     flex-direction: column;
@@ -36,11 +77,6 @@
     width: 100%;
     height: 70%;
     /* background-color: brown; */
-  }
-  .section2-image-container {
-    width: 50%;
-    height: 25%;
-    /* background-color: green; */
   }
 
   .section2-txt-container p{
@@ -171,7 +207,7 @@
     height: 1000px;
     /* background-color: blue; */
     gap: 5px;
-    margin-top: 700px;
+    /* margin-top: 700px; */
     padding-top: 20px;
   }
   .section2-Home-MainContainer {
@@ -186,11 +222,6 @@
     /* background-color: brown; */
     gap: 2px;
     padding: 10px;
-  }
-  .section2-image-container {
-    width: 50%;
-    height: 25% !important;
-    /* background-color: green; */
   }
   .section2-txt-container p {
     font-size: 10px;

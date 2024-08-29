@@ -130,13 +130,11 @@
 .section2-Home {
   width: 100%;
   height: 120vh;
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  /* margin-top: 650px; */
 }
 
 .section2-Home-Header {
@@ -161,12 +159,13 @@
 .section2-image-container {
   width: 40%;
   height: 100%;
-  /* background-color: green; */
 }
 
 .section2-image-container img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .section2-txt-container {
