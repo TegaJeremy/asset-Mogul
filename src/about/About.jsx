@@ -1,11 +1,64 @@
 import React from "react";
 import "./About.css";
-import aboutPics2 from "./images/aboutSec3.jpg";
+import section2image from "../assets/Third.webp";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const About = () => {
   return (
     <div className="MainContainerAbout">
-      <section className="section1About">
+      <section className="section1_container">
+        <p>About</p>
+        <h1>Get to know Assets Mogul</h1>
+      </section>
+      <section className="section2_container">
+        <div className="section2_text_container">
+          <h3>Our Area of Expertise</h3>
+          <p>
+            We specialize in investing in cryptocurrency blockchain assets,
+            offering investors a centralized platform to access a diversified
+            portfolio of crypto assets aimed at achieving optimal risk-adjusted
+            returns in cryptocurrency investing. Our array of active investment
+            strategies spans across four key areas: equities, fixed income,
+            multi-asset, and alternatives. Our proficiency extends across
+            developed and emerging markets, encompassing both public and private
+            markets.
+          </p>
+        </div>
+        <div className="section2_img_container">
+          <img src={section2image} alt="img"/>
+        </div>
+      </section>
+      <section className="section3_container">
+        <div className='section3_item_container'>
+          <h1>Our goal is to make the world of finance more accessible and attainable</h1>
+          <div className="about_features_access_container">
+            <div className="about_features_container">
+              <p>Features</p>
+              <h2>Easy to use</h2>
+            </div>
+            <div className="about_access_container">
+              <p>access over to</p>
+              <h2>4600+ markets</h2>
+            </div>
+          </div>
+          <div className="goal_listing_container">
+            <div className="goal_list_container">
+              <IoIosCheckmarkCircle className="goal_list_icon" />
+              <p>Bitcoin trading & analysis</p>
+            </div>
+            <div className="goal_list_container">
+              <IoIosCheckmarkCircle className="goal_list_icon" />
+              <p>Premium trading technology</p>
+            </div>
+            <div className="goal_list_container">
+              <IoIosCheckmarkCircle className="goal_list_icon" />
+              <p>Professional Support User</p>
+            </div>
+          </div>
+          <p>Trade on Bitcoin, Gold, Oil, Apple, Tesla, crude oil and 6,400+ other <span>world-renowned markets.</span></p>
+        </div>
+      </section>
+      {/* <section className="section1About">
         <h1 className="aboutTxtMobil">About Us</h1>
         <p className="aboutTxtMobil">
           Naxtro Trade Plus stands as a prominent global asset manager, renowned for
@@ -90,7 +143,7 @@ const About = () => {
             preferences and interests, while capitalizing on emerging trends.
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

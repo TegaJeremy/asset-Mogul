@@ -75,22 +75,22 @@ function Footer() {
 
           <div className="footer-contact-container">
             <p className="footer-contact-details">
-              <IoCallOutline />naxtro-Tradeplus.com@gmail.com
+              <IoCallOutline />assetmogul269@gmail.com
             </p>
 
             <p className="footer-contact-details">
-              <IoMailOpenSharp /> info@naxtromail.com
+              <IoMailOpenSharp /> info@assetmogulmail.com
             </p>
 
             <p className="footer-contact-details">
-              <CiLocationOn /> 1 naxtro street main 
+              <CiLocationOn /> 1 asset street main 
             </p>
           </div>
         </div>
       </div>
 
       <div className="copyright">
-        copyright @2024 naxtro
+        copyright @2024 assets-mogul
       </div>
     </section>
   );
