@@ -1,0 +1,46 @@
+.landing_body{
+    width: 100%;
+    position: relative;
+}
+
+.alert_users_achievement_container{
+    position: fixed;
+    z-index: 999999999;
+    left: 20px;
+    bottom: 24px;
+    padding: 1.4rem 1.6rem;
+    background-color: rgb(0, 0, 138);
+    border-radius: 6px;
+    border: 1px solid #979797;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.alert_users_achievement_container.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.alert_users_achievement_container > p{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+.alert_users_achievement_container > p > span{
+    font-weight: bold;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(100%); /* Start and end below the viewport */
+        opacity: 0; /* Invisible when below the viewport */
+    }
+    5%, 45% {
+        transform: translateY(0); /* Fully visible at its original position */
+        opacity: 1; /* Fully visible */
+    }
+    55%, 95% {
+        transform: translateY(-100%); /* Moving up and disappearing above the viewport */
+        opacity: 0; /* Invisible */
+    }
+}
