@@ -44,6 +44,7 @@ import DeleteUser from "./dashboard/DeleteUser/DeleteUser";
 import ScrollToTop from "./ScrollToTop";
 
 import thePrivate from "./components/thePrivate";
+import MarketNews from "./marketNews/MarketNews";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
+              <Route path="/market" element={<MarketNews />} />
             </Route>
 
             <Route path="/login" element={<Login />} />

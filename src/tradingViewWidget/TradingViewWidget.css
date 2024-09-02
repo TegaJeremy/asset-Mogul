@@ -8,4 +8,7 @@
     height: 100%;
 }
 
-.tradingview-widget-copyright{}
+.tradingview-widget-copyright > a > span{
+    color: blue;
+    font-family: 'Inter', sans-serif;
+}
