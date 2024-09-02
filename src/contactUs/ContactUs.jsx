@@ -1,14 +1,48 @@
 import React from "react";
+import "./ContactUs.css"
 import classes from "./ContactUs.module.css";
-import { MdOutlineEmail } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
-import { RiChat1Line } from "react-icons/ri";
-import { GrCompliance } from "react-icons/gr";
+import { BiSupport } from "react-icons/bi";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { HiOutlineBookOpen } from "react-icons/hi2";
+import { FaRegComments } from "react-icons/fa";
+
+
 
 function ContactUs() {
   return (
-    <div className={classes.wholecontact}>
-      <div className={classes.contactDetailsContainer}>
+    <div className="contact_us_body">
+      <section className="contact_us_section1_container">
+        <p>Contact</p>
+        <h1>Contact Us For support</h1>
+      </section>
+      <section className="contact_us_section2_container">
+        <div className='contact_us_section2_top'>
+          <div className="basics_of_investing_container_top_text">
+            <h1>Anytime Support from our team</h1>
+            <p>We're constantly improving our trading platform, trying to make it the best on the market.</p>
+          </div>
+          <button>Get Support</button>
+        </div>
+        <div className='contact_us_section2_bottom'>
+          <div className="support_card_container">
+            <div className="support_card_icon"><BiSupport className="support_icon" /></div>
+            <p>Call Help center</p>
+          </div>
+          <div className="support_card_container">
+            <div className="support_card_icon"><IoDocumentTextOutline className="support_icon" /></div>
+            <p>Call Help center</p>
+          </div>
+          <div className="support_card_container">
+            <div className="support_card_icon"><HiOutlineBookOpen className="support_icon" /></div>
+            <p>Call Help center</p>
+          </div>
+          <div className="support_card_container">
+            <div className="support_card_icon"><FaRegComments className="support_icon" /></div>
+            <p>Call Help center</p>
+          </div>
+        </div>
+      </section>
+      {/* <div className={classes.contactDetailsContainer}>
         <h1 className={classes.contactH1}>
           <span className={classes.contactSpan}>Get in Touch,</span>
           <br />
@@ -17,14 +51,8 @@ function ContactUs() {
         <div className={classes.contactIconContainer}>
           <div className={classes.second}>
             <MdOutlineEmail className={classes.contactIcon1} />
-            {/* <img
-              src={rightBottom}
-              alt="line drawing"
-              className={classes.contactImg1}
-            /> */}
           </div>
         </div>
-
         <FaUsers className={classes.contactIcon2} />
       </div>
 
@@ -63,7 +91,7 @@ function ContactUs() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

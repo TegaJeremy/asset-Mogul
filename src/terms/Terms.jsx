@@ -21,9 +21,12 @@ const Terms = () => {
         <div className='container'>
           <div className='header-content'>
             <h1 className='primary-detail '>Website terms and conditions</h1>
-            <p className='details'>
-             
-"This website, Naxtro Trade Plus, and its contents ("Website") are the exclusive property of Naxtro Trade Plus ("Naxtro Trade Plus" ®), headquartered at Sheaf Street, Sheffield City Centre, Sheffield S1 2BJ, United Kingdom. Your use of this Website is governed by the following Terms and Conditions ("Terms"). Please review these Terms carefully before accessing or using the Website."
+            <p>
+              "This website, Assets-mogul, and its contents ("Website") 
+              are the exclusive property of Assets-mogul ("Assets-mogul" ®),
+              headquartered at Sheaf Street, Sheffield City Centre, Sheffield S1 2BJ, 
+              United Kingdom. Your use of this Website is governed by the following Terms and Conditions ("Terms"). 
+              Please review these Terms carefully before accessing or using the Website."
             </p>
           </div>
         </div>

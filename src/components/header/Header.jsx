@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import "./Header.css";
 import "./HeaderMedia.css";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 
 const Header = () => {
   const [menu, setMenu] = useState(false)
@@ -29,6 +29,10 @@ const Header = () => {
   const goContact = ()=>{
     setMenu(false)
     navigate('/contact')
+  }
+  const goMarket = ()=>{
+    setMenu(false)
+    navigate('/market')
   }
   const goRegister = ()=>{
     setMenu(false)
@@ -57,10 +61,13 @@ const Header = () => {
                   <NavLink to='/terms' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Terms</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/login' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Login</NavLink>
+                  <NavLink to='/contact' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Contact Us</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/contact' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Contact Us</NavLink>
+                  <NavLink to='/market' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Market news</NavLink>
+                </li>
+                <li>
+                  <NavLink to='/login' className={({ isActive }) => isActive ? 'menuactive' : 'menunotactive'}>Login</NavLink>
                 </li>
               </ul>
             </div>
@@ -103,12 +110,15 @@ const Header = () => {
                   <li onClick={goTerms}>
                     <NavLink to='/terms' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Terms</NavLink>
                   </li>
-                  <li onClick={goLogin}>
-                    <NavLink to='/login' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Login</NavLink>
-                  </li >
                   <li onClick={goContact}>
                     <NavLink to='/contact' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Contact Us</NavLink>
                   </li>
+                  <li onClick={goMarket}>
+                    <NavLink to='/market' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Market News</NavLink>
+                  </li>
+                  <li onClick={goLogin}>
+                    <NavLink to='/login' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Login</NavLink>
+                  </li >
                   <li onClick={goRegister}>
                     <NavLink to='/register' className={({ isActive }) => isActive ? 'mobilemenuactive' : 'mobilemenunotactive'}>Create Account</NavLink>
                   </li>

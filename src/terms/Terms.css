@@ -1,13 +1,10 @@
 .main{
   width: 100%;
-  background: 
-    linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-    url('../assets/starbg.jpeg');
 }
 .details {
   font-size: 1rem;
   line-height: 1.5;
-  color: whitesmoke;
+  color: #000;
 }
 
 .header {
@@ -17,8 +14,9 @@
   align-items: center;
   position: relative;
   margin-bottom: 2rem;
-
-  background-image: url(../assets/handshaking_photo.jpg);
+  background: 
+    linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
+    url('../assets/handshaking_photo.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -30,6 +28,12 @@
   padding: 4rem 0;
   text-align: center;
   z-index: 1;
+}
+
+.header-content > p{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
 }
 
 .primary-detail {
