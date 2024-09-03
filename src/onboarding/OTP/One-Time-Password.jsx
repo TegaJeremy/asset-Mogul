@@ -38,7 +38,7 @@ function OneTimePassword() {
       const formData = new FormData();
       formData.append("otp", otp.join(""));
       const response = await axios.post(
-        `https://naxtrotradebackup.onrender.com/verifyOtp/${token}`,
+        `https://asset-mogul-back.onrender.com/verifyOtp/${token}`,
         formData
       );
       setLoading(false);
@@ -61,7 +61,7 @@ function OneTimePassword() {
       const formData = new FormData();
       formData.append("email", saveEmailParsed);
       const response = await axios.post(
-        "https://naxtrotradebackup.onrender.com/resendVerificationOtp",
+        "https://asset-mogul-back.onrender.com/resendVerificationOtp",
         formData
       );
       setLoading(false);

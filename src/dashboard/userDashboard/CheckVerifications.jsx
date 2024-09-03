@@ -30,7 +30,7 @@ function CheckVerifications() {
               Your balance is empty, please make{" "}
               <span
                 onClick={() => nav("/deposit")}
-                style={{ color: "orange", cursor: "pointer" }}
+                style={{ color: "blue", cursor: "pointer" }}
               >
                 deposit
               </span>{" "}
@@ -50,7 +50,7 @@ function CheckVerifications() {
               To make your account safer, please enable{" "}
               <span
                 onClick={() => nav("/twoFA")}
-                style={{ color: "orange", cursor: "pointer" }}
+                style={{ color: "blue", cursor: "pointer" }}
               >
                 2FA
               </span>{" "}
@@ -70,7 +70,7 @@ function CheckVerifications() {
               Your account will be limited to most transactions,{" "}
               <span
                 onClick={() => nav("/kyc")}
-                style={{ color: "orange", cursor: "pointer" }}
+                style={{ color: "blue", cursor: "pointer" }}
               >
                 Click here
               </span>{" "}

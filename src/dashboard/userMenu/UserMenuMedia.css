@@ -56,7 +56,7 @@
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
-    border-right: 1px solid gold;
+    border-right: 1px solid blue;
   }
 
   .user-left-menu-logo-wrapper-media {
@@ -88,7 +88,7 @@
     height: 35%;
     /* background-color: yellow; */
     font-size: 20px;
-    color: gold;
+    color: blue;
   }
   .user-dashboard-deposit-wallet-container{
     padding: 15px;

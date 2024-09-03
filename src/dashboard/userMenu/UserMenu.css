@@ -1,9 +1,10 @@
 .user-dashboard-body {
   width: 100%;
   height: 100vh;
-  background: 
+  background-color: #000;
+  /* background: 
     linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-    url('../../assets/starbg.jpeg');
+    url('../../assets/starbg.jpeg'); */
   display: flex;
   /* flex-direction: column; */
 }
@@ -18,7 +19,7 @@
   background: black;
   display: flex;
   justify-content: center;
-  border-right: 1px solid gold;
+  border-right: 1px solid blue;
 }
 
 .user-dashboard-left-body {
@@ -33,12 +34,12 @@
 }
 
 .user-dashboard-left-body-logo {
-  width: 100px;
-  height: 10vh;
+  width: 150px;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: cornflowerblue; */
+  /* background: yellow; */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -120,7 +121,7 @@
   font-size: 16px;
 }
 .user-dashboard-deposit-withdraw-btn-wrapper button:hover{
-  background-color: rgb(244, 208, 5);
+  background-color: rgb(79, 79, 242);
   color: white;
 }
 .user-dashboard-deposit-withdraw-btn-wrapper button:active{
@@ -174,6 +175,7 @@
   /* justify-content: center; */
   /* border-radius: 10px; */
   cursor: pointer;
+  text-decoration: none;
 }
 
 .user-dashboard-left-menu-dashboard-active,
@@ -188,11 +190,12 @@
 .user-dashboard-left-menu-changePassword-active {
   width: 100%;
   height: 50px;
-  background: gold;
+  background: rgb(79, 79, 242);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: #fff;
+  text-decoration: none;
   border-radius: 6px;
 }
 
@@ -227,7 +230,7 @@
 .user-dashboard-left-menu-supportTicket:hover,
 .user-dashboard-left-menu-twoFA:hover,
 .user-dashboard-left-menu-changePassword:hover {
-  background: #cd9948;
+  background: rgb(106, 106, 255);
   color: white;
   border-radius: 6px;
 }
@@ -331,17 +334,17 @@
   width: 88%;
   height: 100%;
   padding: 0.4rem 0.8rem;
-  border: 1px solid gold;
+  border: 1px solid blue;
   border-radius: 8px;
   background: none;
-  color: gold;
+  color: blue;
   font-size: 17px;
   cursor: pointer;
   font-weight: 500;
 }
 
 .user-dashboard-logout-btn:hover {
-  background: gold;
+  background: rgb(79, 79, 242);
   color: white;
 }
 

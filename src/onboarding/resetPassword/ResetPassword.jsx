@@ -3,7 +3,7 @@ import "./ResetPassword.css";
 import axios from "axios";
 import { BiSolidHide, BiSolidShow } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router-dom";
-import citadelLogo from "../../assets/citadel2.png"
+import citadelLogo from "../../assets/asset_mogul_logo.png"
 import { FaBedPulse } from "react-icons/fa6";
 import { ClipLoader } from "react-spinners";
 // import citadelLogo2 from "../../assets/image"
@@ -26,7 +26,7 @@ const ResetPassword = () => {
     msg: "",
   });
 
-  const url = `https://naxtrotradebackup.onrender.com/resetPassword/${token}`;
+  const url = `https://asset-mogul-back.onrender.com/resetPassword/${token}`;
 
   const data = { newPassword, confirmNewPassword };
 

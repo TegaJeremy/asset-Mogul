@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ForgetPassword.css";
 import "./ForgetPasswordMedia.css";
 // import citadelLogo from "../../assets/image/citadelLogo.png";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 // import ultimate_logo from '.././../assets/ultimate_logo.png'
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { ClipLoader } from "react-spinners";
@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   const [loading, setloading] = useState(false);
   const [email, setEmail] = useState("");
   const nav = useNavigate();
-  const url = `https://naxtrotradebackup.onrender.com/forgotPassword`;
+  const url = `https://asset-mogul-back.onrender.com/forgotPassword`;
 
   const sendMailForPassword = async () => {
     if (!email.trim()) {
@@ -46,7 +46,9 @@ const ForgetPassword = () => {
   return (
     <div className="forget-password-body">
       <div className="forget-password-main-body">
-        <img src={naxtrologo} alt="citadelLogo" />
+        <div className="forget_password_logo_container">
+          <img src={naxtrologo} alt="citadelLogo" />
+        </div>
         <h1 className="forget-password-h1">Forgotten Password</h1>
         <p className="forget-password-p">
           Enter your email and we'll send you a link to reset your password

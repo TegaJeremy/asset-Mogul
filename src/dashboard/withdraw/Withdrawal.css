@@ -140,25 +140,27 @@
 
 .deposit_HistoryHeader {
   /* background: #000; */
-
-  align-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+  /* background-color: yellow; */
 }
 
-.search_HistoryDiv {
-  /* align-items: center; */
+.deposit_history_back_container{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #fff;
+  /* background-color: blue; */
 }
 
-.search_HistoryDiv input {
-  padding: 0.2rem 0.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.174);
-  padding-left: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  outline: none;
-  /* border-radius: 5px 0px 0px 5px; */
-  color: grey;
-  background: transparent;
+.deposit_history_back_container > h3{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .search_HistoryDiv input::placeholder {

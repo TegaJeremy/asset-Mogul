@@ -5,8 +5,9 @@ import { IoSearch } from "react-icons/io5";
 import { BounceLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { expireSession } from "../../Redux/State";
+import { MdOutlineArrowBack } from "react-icons/md";
 
-function DepositHistory({ user }) {
+function DepositHistory({ user, setDepositHistory }) {
   const [allDepositHistory, setAllDepositHistory] = useState([]);
   const [loading, setLoading] = useState(false);
   console.log(allDepositHistory);
@@ -14,7 +15,7 @@ function DepositHistory({ user }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://naxtrotradebackup.onrender.com/DepositHistory/${user._id}`
+        `https://asset-mogul-back.onrender.com/DepositHistory/${user._id}`
       );
       setLoading(false);
       console.log(response);
@@ -52,10 +53,15 @@ function DepositHistory({ user }) {
           flexDirection: "column",
           position: "relative",
           borderRadius: "3px",
+          // backgroundColor: "green"
           // backgroundImage: linear-gradient(to bottom right, #403f44, #1e1b32),
         }}
       >
         <section className="deposit_HistoryHeader">
+          <div className="deposit_history_back_container" onClick={()=>setDepositHistory(false)}>
+            <MdOutlineArrowBack/>
+            <h3>Back</h3>
+          </div>
           <div className="search_HistoryDiv">
             <input type="text" placeholder="Search transaction" />
             <span>
