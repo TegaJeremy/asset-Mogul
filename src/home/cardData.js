@@ -8,7 +8,7 @@ export const cardData = [
   {
     id: 1,
     image: investmentIcon1, // Remove the curly braces
-    name: "NAXTRO PLUS STARTER PLAN",
+    name: "ASSET MOGUL STARTER PLAN",
     duration: "180%  after 14 day",
     Minimum: "$5,000",
     Maximum: "$14,999",
@@ -20,7 +20,7 @@ export const cardData = [
   {
     id: 2,
     image: investmentIcon2, // Remove the curly braces
-    name: "NAXTRO PLUS PREMIUM PLAN",
+    name: "ASSET MOGUL PREMIUM PLAN",
     duration: "201% after 30 day",
     Minimum: "$15,000",
     Maximum: "$24,999",
@@ -32,7 +32,7 @@ export const cardData = [
   {
     id: 3,
     image: investmentIcon3, // Remove the curly braces
-    name: "NAXTRO PLUS ENTERPRISE PLAN",
+    name: "ASSET MOGUL ENTERPRISE PLAN",
     duration: "310%  after 30 day",
     Minimum: "$25,000",
     Maximum: "$49,999",
@@ -44,7 +44,7 @@ export const cardData = [
   {
     id: 4,
     image: investmentIcon3, // Remove the curly braces
-    name: "NAXTRO PLUS PRO PLAN",
+    name: "ASSET MOGUL PRO PLAN",
     duration: "429% 30 day",
     Minimum: "$50,000",
     Maximum: "$99,999",
@@ -56,7 +56,7 @@ export const cardData = [
   {
     id: 5,
     image: investmentIcon3,
-    name: "NAXTRO PLUS ULTIMATE PLAN",
+    name: "ASSET MOGUL ULTIMATE PLAN",
     duration: "50% 30 day",
     Minimum: "$50000",
     Maximum: "$100000",

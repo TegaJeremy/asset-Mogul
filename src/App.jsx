@@ -95,7 +95,6 @@ function App() {
               <Route path="/scheduleInvestment" element={<ScheduleInvestment />}/>
             </Route>
 
-
           </Routes>
         </BrowserRouter>
         <ToastContainer />

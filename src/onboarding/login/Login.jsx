@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 // import citadelLogo from "/CITADEL GOLD LOGOmain.png";
 // import citadelLogo from "../../assets/image/citadelLogo.png";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 // import bulb from "../../assets/bulb with image on.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -190,10 +190,10 @@ const Login = () => {
                   setLoading(true);
                 }}
               >
+                {/* <span></span>
                 <span></span>
                 <span></span>
-                <span></span>
-                <span></span>{" "}
+                <span></span>{" "} */}
                 {loading ? (
                   <ClipLoader
                     id="clipLoader"

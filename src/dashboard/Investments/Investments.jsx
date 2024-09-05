@@ -29,7 +29,7 @@ function Investments() {
 
   const plans = [
     {
-      plan: "NAXTRO PLUS STARTER",
+      plan: "ASSET MOGUL STARTER",
       param: "basicPlan",
       minAmount: "5,000.00",
       maxAmount: "14,999.00",
@@ -37,7 +37,7 @@ function Investments() {
       days: 30,
     },
     {
-      plan: "NAXTRO PLUS PREMIUM",
+      plan: "ASSET MOGUL PREMIUM",
       param: "proPlan",
       minAmount: "15,000.00",
       maxAmount: "24,999.00",
@@ -45,7 +45,7 @@ function Investments() {
       days: 30,
     },
     {
-      plan: "NAXTRO PLUS ENTERPRISE",
+      plan: "ASSET MOGUL ENTERPRISE",
       param: "premiumPlan",
       minAmount: "25,000.00",
       maxAmount: "49,999.00",
@@ -53,7 +53,7 @@ function Investments() {
       days: 30,
     },
     {
-      plan: "NAXTRO PLUS PRO",
+      plan: "ASSET MOGUL PRO",
       param: "retirementPlan",
       minAmount: "50,000.00",
       maxAmount: "99,999.00",
@@ -61,7 +61,7 @@ function Investments() {
       days: 30,
     },
     {
-      plan: "NAXTRO Ultimate",
+      plan: "ASSET MOGUL Ultimate",
       param: "ultimatePlan",
       minAmount: "100,000.00",
       maxAmount: "100,000,000.00",

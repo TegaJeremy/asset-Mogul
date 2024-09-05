@@ -10,7 +10,7 @@
 .verification-boxes {
   width: 100%;
   padding: 1rem;
-  border: 1px solid gold;
+  border: 1px solid rgb(203, 203, 2);
   border-radius: 5px;
   display: flex;
   gap: 1rem;
@@ -29,7 +29,8 @@
 
 .verification-icons-2,
 .verification-icons-3 {
-  color: #cd9948;
+  /* color: #cd9948; */
+  color: yellow;
 }
 
 .verification-text {

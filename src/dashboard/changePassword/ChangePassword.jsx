@@ -57,10 +57,9 @@ const ChangePassword = () => {
     }
   }
 
-  console.log(userToken.token);
+  // console.log(userToken.token);
   return (
     <div className="change-password-container">
-      <div className="change-password-body">
         <h2 className="change-password-title">Change Password</h2>
         <div className="change-password-card">
           <div className="change-password-card-body">
@@ -119,7 +118,6 @@ const ChangePassword = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

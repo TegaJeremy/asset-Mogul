@@ -28,7 +28,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import DeleteUser from "../DeleteUser/DeleteUser";
 // import citadelLogo from "../../assets/image/citadelLogo.png";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 // import CITADEL from "/CITADEL.png";
 import {
   expireSession,
@@ -625,6 +625,28 @@ const UserMenu = () => {
                   </div>
                 </div>
             </NavLink>
+            <NavLink to='/referral' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-referral-active' : 'user-dashboard-left-menu-referral'} onClick={() => {
+                setMenu(false)}}>
+              <div className="user-dashboard-menu-referral-container">
+                  <div className="user-dashboard-menu-referral-container-icon">
+                    <FaUsers className= "user-dashboard-menu-referral-icon"/>
+                  </div>
+                  <div className="user-dashboard-menu-referral-container-title">
+                    referrals
+                  </div>
+                </div>
+            </NavLink>
+            <NavLink to='/twoFA' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-twoFA-active' : 'user-dashboard-left-menu-twoFA'} onClick={() => {
+                setMenu(false)}}>
+              <div className="user-dashboard-menu-twoFA-container">
+                  <div className="user-dashboard-menu-twoFA-container-icon">
+                    <GrShieldSecurity className= "user-dashboard-menu-twoFA-icon"/>
+                  </div>
+                  <div className="user-dashboard-menu-twoFA-container-title">
+                    2FA Security
+                  </div>
+                </div>
+            </NavLink>
             <NavLink to='/changepassword' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'} onClick={() => {
                 setMenu(false);
               }}>
@@ -639,6 +661,7 @@ const UserMenu = () => {
                   </div>
                 </div>
             </NavLink>
+          
               {AdminUser.isAdmin ? (
                 <>
                   <NavLink to='/assignmoney' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'} onClick={() => {

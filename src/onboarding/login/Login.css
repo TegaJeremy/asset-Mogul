@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: 
+  background-color: #000;
+  /* background: 
     linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-    url('../../assets/starbg.jpeg');
+    url('../../assets/starbg.jpeg'); */
 }
 
 .animation-div {
@@ -60,7 +61,6 @@
 }
 
 .Login_LogoPart {
-  /* background-color: red; */
   width: 10rem;
   max-width: 10rem;
   height: 150px;

@@ -12,7 +12,7 @@ import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
 
 // import citadelLogo from "../../../public/CITADEL GOLD LOGOmain.png";
 // import citadelLogo from "../../assets/image/citadelLogo.png";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 
 const Register = () => {
   const nav = useNavigate();
