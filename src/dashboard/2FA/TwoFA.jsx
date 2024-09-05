@@ -11,7 +11,7 @@ function TwoFA() {
   const [verifyLoading, setVerifytLoading] = useState(false);
   const [qrCode, setQrCode] = useState("");
   const [secretBase, setsecretBase] = useState("");
-  const url = "https://naxtrotradebackup.onrender.com/code";
+  const url = "https://asset-mogul-back.onrender.com/code";
   const generatBarCode = async () => {
     setLoading(true);
     try {
@@ -43,7 +43,7 @@ function TwoFA() {
     setVerifytLoading(true);
     try {
       const response = await axios.post(
-        "https://naxtrotradebackup.onrender.com/verify",
+        "https://asset-mogul-back.onrender.com/verify",
         {
           token: googleToken,
         }

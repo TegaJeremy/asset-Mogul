@@ -12,7 +12,7 @@ import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
 
 // import citadelLogo from "../../../public/CITADEL GOLD LOGOmain.png";
 // import citadelLogo from "../../assets/image/citadelLogo.png";
-import naxtrologo from "../../assets/naxtrologo.png";
+import naxtrologo from "../../assets/asset_mogul_logo.png";
 
 const Register = () => {
   const nav = useNavigate();
@@ -153,7 +153,7 @@ const Register = () => {
         formData.append("city", city.trim());
         formData.append("profilePicture", "");
         const response = await axios.post(
-          "https://naxtrotradebackup.onrender.com/registration",
+          "https://asset-mogul-back.onrender.com/registration",
           formData
         );
         console.log(response);

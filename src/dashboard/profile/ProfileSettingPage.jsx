@@ -48,7 +48,7 @@ function ProfileSettingPage({ user }) {
     setLoading(true);
     try {
       const response = await axios.put(
-        `https://naxtrotradebackup.onrender.com/updateUser/${userId}`,
+        `https://asset-mogul-back.onrender.com/updateUser/${userId}`,
         formData,
         config
       );

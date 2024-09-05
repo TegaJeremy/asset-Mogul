@@ -106,8 +106,8 @@
   padding: 5px; */
   /* background: yellow; */
   border-radius: 6px;
-  box-shadow: gold 0px 0px 2px 0px,
-    gold 0px 5px 20px -4px;
+  box-shadow: blue 0px 0px 2px 0px,
+    blue 0px 5px 20px -4px;
 }
 
 
@@ -453,7 +453,7 @@
 }
 .plans:hover{
   background-color: rgb(65, 65, 119);
-  color: gold;
+  color: blue;
 }
 .dashboard_stock_widget{
   width: 100%;

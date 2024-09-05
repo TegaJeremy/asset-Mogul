@@ -20,7 +20,7 @@ function MyInv() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://naxtrotradebackup.onrender.com/getOngoingPlans/${user.id}`
+        `https://asset-mogul-back.onrender.com/getOngoingPlans/${user.id}`
       );
       setLoading(false);
       console.log(response);

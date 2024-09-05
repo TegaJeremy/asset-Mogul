@@ -13,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom right, #403f44, #1e1b32);
+  background-color: rgb(31, 31, 55);
+  /* background-image: linear-gradient(to bottom right, #403f44, #1e1b32); */
   padding: 2% 3%;
   gap: 1rem;
   flex-wrap: wrap;
@@ -23,11 +24,15 @@
 .First_TFA {
   /* width: 50%; */
   max-width: 28rem;
-  height: 90%;
+  height: auto;
   background: #000;
   border-radius: 5px;
   padding-inline: 20px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .Sec_TFA {
@@ -62,7 +67,6 @@
 
 .FirstTFA_Mid {
   width: 100%;
-  height: 17%;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -75,7 +79,7 @@
 
 .FirstTFA_Mid .Copy_Btn {
   width: 13%;
-  height: 48%;
+  /* height: 48%; */
   background: red;
   color: white;
   font-size: 14px;
@@ -85,7 +89,7 @@
   align-items: center;
   position: absolute;
   border-radius: 5px;
-  right: -2%;
+  right: -1%;
   cursor: pointer;
   top: 38%;
 }
@@ -104,7 +108,7 @@
 .FirstTFA_Mid input {
   width: 100%;
   padding-left: 10px;
-  height: 48%;
+  /* height: 48%; */
   border-radius: 5px;
   border: none;
   outline: none;
@@ -112,7 +116,8 @@
   font-size: 15px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.693);
-  background: rgba(97, 3, 97, 0.727);
+  background: rgb(17, 17, 78);
+  padding: 12px 10px;
 }
 
 .FirstTFA_Top span {
@@ -226,7 +231,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
-  background: purple;
+  background: rgb(79, 79, 242);
   color: white;
   font-weight: bold;
 }

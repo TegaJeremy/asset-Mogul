@@ -24,7 +24,7 @@ const AssignMoney = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `https://naxtrotradebackup.onrender.com/assignMoney`,
+        `https://asset-mogul-back.onrender.com/assignMoney`,
         { identifier, amount },
         {
           headers: {

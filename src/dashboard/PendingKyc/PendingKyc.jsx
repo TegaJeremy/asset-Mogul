@@ -22,7 +22,7 @@ function PendingKyc() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://naxtrotradebackup.onrender.com/getUsersKYCWithUnverifiedKYC`
+        `https://asset-mogul-back.onrender.com/getUsersKYCWithUnverifiedKYC`
       );
       console.log(response);
       setLoading(false);
@@ -56,7 +56,7 @@ function PendingKyc() {
     setApproveLoading(true);
     try {
       const response = await axios.post(
-        `https://naxtrotradebackup.onrender.com/approveKyc`,
+        `https://asset-mogul-back.onrender.com/approveKyc`,
         { userId }
       );
       console.log(response);
@@ -87,7 +87,7 @@ function PendingKyc() {
     console.log(userId)
     try {
       const response = await axios.post(
-        `https://naxtrotradebackup.onrender.com/rejectKyc`,
+        `https://asset-mogul-back.onrender.com/rejectKyc`,
         { userId }
       );
       console.log(response);

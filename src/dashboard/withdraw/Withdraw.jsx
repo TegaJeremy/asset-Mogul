@@ -41,7 +41,7 @@ const Withdraw = () => {
       const formData = new FormData();
       formData.append("usd", usd);
       const response = await axios.post(
-        `https://naxtrotradebackup.onrender.com/withdrawMoney/${user._id}`,
+        `https://asset-mogul-back.onrender.com/withdrawMoney/${user._id}`,
         formData
       );
       console.log(response);

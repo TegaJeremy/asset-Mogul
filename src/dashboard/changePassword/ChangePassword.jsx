@@ -24,7 +24,7 @@ const ChangePassword = () => {
       setPasswordError(false);
       try {
         const response = await axios.post(
-          `https://naxtrotradebackup.onrender.com/changePassword/${userToken?.token}`,
+          `https://asset-mogul-back.onrender.com/changePassword/${userToken?.token}`,
           passBody,
           {
             headers: {
@@ -57,10 +57,9 @@ const ChangePassword = () => {
     }
   }
 
-  console.log(userToken.token);
+  // console.log(userToken.token);
   return (
     <div className="change-password-container">
-      <div className="change-password-body">
         <h2 className="change-password-title">Change Password</h2>
         <div className="change-password-card">
           <div className="change-password-card-body">
@@ -119,7 +118,6 @@ const ChangePassword = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

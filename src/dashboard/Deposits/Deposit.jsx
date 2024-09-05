@@ -77,7 +77,7 @@ function Deposit() {
           )}
         </>
       ) : (
-        <DepositHistory user={user} />
+        <DepositHistory user={user} setDepositHistory={setDepositHistory} />
       )}
     </div>
   );
