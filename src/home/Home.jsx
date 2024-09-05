@@ -1,30 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Home.css";
 import "./HomeMedia.css";
 import CardPlan from "./CardPlan";
 import ImgHomeSec4 from "../assets/First.jpg";
-// import citadelHomeLogo from "../assets/citadel1.png";
-import mobilePhone from "../assets/phone.png";
 import home2image from "../assets/Second.webp";
-// transfer payment method
-import bitCoin from "../assets/bitcoin.gif";
-import bitCoinCash from "../assets/bitcoincash.gif";
-import litecoin from "../assets/litecoin.gif";
-import tron from "../assets/tron.gif";
-import pax from "../assets/pax.gif";
-import tetherusdt from "../assets/tetherusdt.gif";
-import tetherusdterc20token from "../assets/tetherusdterc20token.gif";
-import dash from "../assets/dash.gif";
-import doge from "../assets/doge.gif";
-import payeer from "../assets/payeer.gif";
-import ethereum from "../assets/ethereum.gif";
-import tetherusdttrc20token from "../assets/tetherusdttrc20token.gif";
 import { motion, stagger } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { SlChart } from "react-icons/sl";
 import { LiaChessBishopSolid } from "react-icons/lia";
 import { GrSecure } from "react-icons/gr";
 import { FaCoins } from "react-icons/fa";
+import MovingTradingWidget from "../tradingViewWidget/MovingTradingWidget";
 
 
 const Home = () => {
@@ -34,27 +20,33 @@ const Home = () => {
   return (
     <>
       <div className="home-body">
-          <motion.div 
-            className='hero_container'
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 30,
-              mass: 1.5,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{ margin: "-40px", once: "true" }}
-          >
-            <h1>The World’s Most Popular Way to Hold, Invest and Trade Crypto.</h1>
-            <p>Buy Bitcoin, Ethereum, and other Leading cryptocurrencies on a platform trusted by millions.</p>
-            <button onClick={()=>navigate('/register')}>Get Started</button>
-          </motion.div>
+          <div className="hero_container_body">
+            <motion.div 
+              className='hero_container'
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{ margin: "-40px", once: "true" }}
+            >
+              <h1>The World’s Most Popular Way to Hold, Invest and Trade Crypto.</h1>
+              <p>Buy Bitcoin, Ethereum, and other Leading cryptocurrencies on a platform trusted by millions.</p>
+              <button onClick={()=>navigate('/register')}>Get Started</button>
+            </motion.div>
+            <div className="hero_widget_container">
+              <MovingTradingWidget/>
+            </div>
+          </div>
+          
           <div className="section2-Home">
             <p className="section2-Home-Header">
               Welcome to Assets mogul
