@@ -17,6 +17,7 @@ import { expireSession } from "../../Redux/State";
 import { BounceLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import GeneralNumbers from "./GeneralNumbers";
+import InsightChart from "./InsightChart";
 
 const Dashboard = () => {
   const nav = useNavigate();
@@ -118,6 +119,13 @@ const Dashboard = () => {
           AdminUser.isAdmin ? null : <CheckVerifications />
         }
         <>
+          {
+            AdminUser.isAdmin ? 
+            <div className="chart_container">
+              <InsightChart/>
+            </div>
+            : null
+          }
           <div className="dashboard-coin-card-container">
             <div className="dashboard-coin-balance-body">
               <SymbolOverview width="100%" colorTheme="dark" />

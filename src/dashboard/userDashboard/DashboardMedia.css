@@ -1,6 +1,7 @@
 @media only screen and (min-width: 320px) and (max-width: 576px) {
   .dashboard-content-container{
-    padding: 0 15px;
+    padding: 0 10px;
+    /* background-color: yellow; */
   }
 
   .dashboard-content-body {
