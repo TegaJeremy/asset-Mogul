@@ -13,9 +13,9 @@
   /* background: 
     linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
     url('../assets/starbg.jpeg'); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
 }
 
 .hero-holder {
@@ -29,7 +29,6 @@
   height: auto;
   /* background-color: yellow; */
 }
-
 
 .supposed-h1 {
   font-size: 3rem;
@@ -88,15 +87,22 @@
   /* background: gray; */
 }
 
-.hero_container_body{
+.hero_container_body {
   width: 100%;
-  background: 
-  linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-  url('../assets/hero_image.jpg');
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.903),
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.707)
+    ),
+    url("../assets/hero_image.jpg");
+  background-attachment: fixed;
   position: relative;
+  height: 80vh;
+  overflow: hidden;
 }
 
-.hero_container{
+.hero_container {
   width: 100%;
   padding: 7rem 4rem;
   margin-bottom: 40px;
@@ -105,23 +111,23 @@
   gap: 20px;
 }
 
-.hero_container > h1{
-  font-family: 'Poppins', sans-serif;
+.hero_container > h1 {
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-size: 3rem;
 }
 
-.hero_container > p{
-  font-family: 'Roboto', sans-serif;
+.hero_container > p {
+  font-family: "Roboto", sans-serif;
   color: #908f8f;
   font-size: 1.4rem;
   font-style: italic;
 }
 
-.hero_container > button{
+.hero_container > button {
   width: 20%;
   padding: 1rem 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
@@ -132,7 +138,7 @@
   margin-top: 20px;
 }
 
-.hero_widget_container{
+.hero_widget_container {
   width: 100%;
   height: 60px;
   /* background-color: green; */
@@ -197,27 +203,27 @@
 
 .section2-txt-container p {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* color: #6a7c92; */
   color: #000;
   line-height: 28px;
 }
 
-.basics_of_investing_body{
+.basics_of_investing_body {
   width: 100%;
   padding: 1rem 4rem;
   margin-top: 50px;
   margin-bottom: 100px;
 }
 
-.basics_of_investing_container{
+.basics_of_investing_container {
   width: 100%;
-  background-color: #F2F2F5;
+  background-color: #f2f2f5;
   border-radius: 4px;
   padding: 3rem 2.5rem;
 }
 
-.basics_of_investing_container_top{
+.basics_of_investing_container_top {
   width: 100%;
   height: max-content;
   display: flex;
@@ -226,46 +232,46 @@
   gap: 20px;
 }
 
-.basics_of_investing_container_top_text{
+.basics_of_investing_container_top_text {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.basics_of_investing_container_top_text > h1{
+.basics_of_investing_container_top_text > h1 {
   font-size: 2.3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000;
   font-weight: 600;
 }
 
-.basics_of_investing_container_top_text > p{
+.basics_of_investing_container_top_text > p {
   font-size: 1.1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #535353;
   font-weight: 400;
 }
 
-.basics_of_investing_container_top > button{
+.basics_of_investing_container_top > button {
   padding: 1.2rem 4rem;
   height: max-content;
   background-color: #000;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.basics_of_investing_container_bottom{
+.basics_of_investing_container_bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
 }
 
-.basics_of_investing_card_container{
+.basics_of_investing_card_container {
   width: 23.2%;
   height: max-content;
   /* background-color: red; */
@@ -274,7 +280,7 @@
   gap: 10px;
 }
 
-.basics_investing_card_icon{
+.basics_investing_card_icon {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 100%;
@@ -287,17 +293,17 @@
   font-size: 1.4rem;
 }
 
-.basics_of_investing_card_container > h3{
+.basics_of_investing_card_container > h3 {
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   color: #000;
   line-height: 1.8rem;
 }
 
-.basics_of_investing_card_container > p{
+.basics_of_investing_card_container > p {
   font-size: 16px;
   font-family: "Inter", sans-serif;
-  color: #8B8F9F;
+  color: #8b8f9f;
   line-height: 1.6rem;
   font-weight: 300;
 }
@@ -328,7 +334,7 @@
 
 .section3-Home-Header h4 {
   font-size: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   background-color: rgb(172, 172, 255);
   color: rgb(31, 31, 250);
@@ -340,7 +346,7 @@
 
 .section3-Home-Header h1 {
   font-size: 25px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: rgb(28, 28, 28);
 }
@@ -358,7 +364,7 @@
 .section4_Home {
   width: 100%;
   height: auto;
-  background-color: #F2F2F5;
+  background-color: #f2f2f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,13 +383,13 @@
 .section4-Home-MainContainer h1 {
   color: #000;
   font-size: 3.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .section4-Home-MainContainer p {
   color: rgb(99, 99, 99);
   padding-top: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .section4-Home-button {
@@ -398,11 +404,7 @@
   padding-block: 1rem;
   border-radius: 4px;
   color: white;
-  background: linear-gradient(
-      240deg,
-      rgb(79, 79, 242),
-      black
-    );
+  background: linear-gradient(240deg, rgb(79, 79, 242), black);
 }
 
 .section4-home-imgContainer {
@@ -442,7 +444,7 @@
   height: 15%;
   font-size: 40px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: whitesmoke;
 }
 
@@ -482,9 +484,7 @@
 
 .section5-Home-textHolder p {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: whitesmoke;
   line-height: 28px;
 }
-
-
