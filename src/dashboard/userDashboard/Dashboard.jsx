@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { expireSession } from "../../Redux/State";
 import { BounceLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import GeneralNumbers from "./GeneralNumbers";
 
 const Dashboard = () => {
   const nav = useNavigate();
@@ -25,6 +26,7 @@ const Dashboard = () => {
   const [totalWithdrawal, setTotalWithdrawal] = useState(0);
   const [lastestTransaction, setlastestTransaction] = useState({});
   const { id } = useSelector((state) => state.BTC.user);
+  const AdminUser = useSelector((state) => state.BTC.userRes);
 
   async function getTotalDeposit() {
     try {
@@ -108,7 +110,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard-content-container">
       <div className="dashboard-content-body">
-        <CheckVerifications />
+        {
+          AdminUser.isAdmin ? <GeneralNumbers/> : null
+        }
+        
+        {
+          AdminUser.isAdmin ? null : <CheckVerifications />
+        }
         <>
           <div className="dashboard-coin-card-container">
             <div className="dashboard-coin-balance-body">
