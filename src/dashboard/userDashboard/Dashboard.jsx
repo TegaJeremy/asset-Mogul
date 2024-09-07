@@ -110,10 +110,9 @@ const Dashboard = () => {
   return (
     <div className="dashboard-content-container">
       <div className="dashboard-content-body">
-        {/* {
+        {
           AdminUser.isAdmin ? <GeneralNumbers/> : null
-        } */}
-        <GeneralNumbers/> 
+        }
         
         {
           AdminUser.isAdmin ? null : <CheckVerifications />
