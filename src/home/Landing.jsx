@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import TickerTapeComponent from "../tradingViewWidget/TickerTapeComponent";
 import "./landing.css";
 
 const Landing = () => {
@@ -44,6 +45,9 @@ const Landing = () => {
 
   return (
     <>
+      <div>
+        <TickerTapeComponent />
+      </div>
       <div className="landing_body">
         <Header />
         <Outlet />

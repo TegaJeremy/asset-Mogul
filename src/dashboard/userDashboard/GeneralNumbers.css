@@ -1,0 +1,66 @@
+.general_numbers_body{
+    width: 100%;
+    padding: 10px 0px;
+    /* background-color: green; */
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.general_numbers_container{
+    background-color: rgb(51, 51, 74);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+}
+
+.general_numbers_text{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.general_numbers_text > p{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: lightgrey;
+}
+
+.general_numbers_text > h3{
+    font-family: 'roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.general_numbers_icon_container{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #7aa5de;
+    color: #032357;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .general_numbers_container{
+        width: 100%;
+    }
+
+}

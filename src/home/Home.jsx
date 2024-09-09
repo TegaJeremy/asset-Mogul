@@ -13,9 +13,12 @@ import { FaCoins } from "react-icons/fa";
 import MovingTradingWidget from "../tradingViewWidget/MovingTradingWidget";
 import { useState, useEffect } from "react";
 import SlideShow from "./SlideShow";
+import TickerTapeComponent from "../tradingViewWidget/TickerTapeComponent";
 
+import { useTranslation } from "react-i18next";
 const Home = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const shows = [
     {
       h1: "The World’s Most Popular Way to Hold, Invest and Trade Crypto. ",
@@ -43,6 +46,7 @@ const Home = () => {
 
   return (
     <>
+      
       <div className="home-body">
         <div className="hero_container_body js-fullheight">
           <motion.div
@@ -83,13 +87,13 @@ const Home = () => {
             </p> */}
             {/* <button onClick={() => navigate("/register")}>Get Started</button> */}
           </motion.div>
-          <div className="hero_widget_container">
+          {/* <div className="hero_widget_container">
             <MovingTradingWidget />
-          </div>
+          </div> */}
         </div>
 
         <div className="section2-Home">
-          <p className="section2-Home-Header">Welcome to Assets mogul</p>
+          <p className="section2-Home-Header">{t("welcome")}</p>
           <motion.div className="section2-Home-MainContainer">
             <div className="section2-image-container">
               <motion.img
