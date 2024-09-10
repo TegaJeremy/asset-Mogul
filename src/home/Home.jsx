@@ -14,6 +14,8 @@ import MovingTradingWidget from "../tradingViewWidget/MovingTradingWidget";
 import { useState, useEffect } from "react";
 import SlideShow from "./SlideShow";
 import TickerTapeComponent from "../tradingViewWidget/TickerTapeComponent";
+import CountUp from "react-countup";
+import earth from "../assets/earth.png";
 
 import { useTranslation } from "react-i18next";
 const Home = () => {
@@ -46,50 +48,106 @@ const Home = () => {
 
   return (
     <>
-      
       <div className="home-body">
         <div className="hero_container_body js-fullheight">
-          <motion.div
-            className="hero_container"
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 30,
-              mass: 1.5,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{ margin: "-40px", once: "true" }}
-          >
-            <AnimatePresence>
-              {shows.map((show, index) => (
-                <SlideShow
-                  showPrimaryHeader={show.h1}
-                  showSpan={show.span}
-                  showDetail={show.p}
-                  key={index}
-                  shows={shows}
-                  index={show.id}
-                />
-              ))}
-            </AnimatePresence>
-            {/* <h1>
+          <div>
+            <motion.div
+              className="hero_container"
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{ margin: "-40px", once: "true" }}
+            >
+              <AnimatePresence>
+                {shows.map((show, index) => (
+                  <SlideShow
+                    showPrimaryHeader={show.h1}
+                    showSpan={show.span}
+                    showDetail={show.p}
+                    key={index}
+                    shows={shows}
+                    index={show.id}
+                  />
+                ))}
+              </AnimatePresence>
+              {/* <h1>
               The World’s Most Popular Way to Hold, Invest and Trade Crypto.
-            </h1>
-            <p>
+              </h1>
+              <p>
               Buy Bitcoin, Ethereum, and other Leading cryptocurrencies on a
               platform trusted by millions.
             </p> */}
-            {/* <button onClick={() => navigate("/register")}>Get Started</button> */}
+              {/* <button onClick={() => navigate("/register")}>Get Started</button> */}
+            </motion.div>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              transition={{
+                type: "tween",
+                duration: 2,
+                delay: 1,
+                ease: [0.25, 0.6, 0.3, 0.8],
+              }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="count-up-container"
+            >
+              <div className="count-up-subcontainer">
+                <CountUp start={0} end={10} delay={4} duration={5} />+
+                <p className="count-up-details">Decades of Distinction</p>
+              </div>
+              <div className=" count-up-subcontainer">
+                <CountUp start={0} end={500} delay={4} duration={5} />K
+                <p className="count-up-details">Worldwide Investors</p>
+              </div>
+
+              <div className=" count-up-subcontainer">
+                <CountUp start={0} end={91} delay={6} duration={4} />%
+                <p className="count-up-details">Client satisfaction</p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="hero_writeup_img"
+            initial={{
+              opacity: 0,
+              y: "11vh",
+            }}
+            animate={{ y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 10,
+              mass: 1,
+              duration: 5,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            // viewport={{ margin: "-40px" }}
+          >
+            <motion.img
+              src={earth}
+              alt="mobilePhone"
+              className="earth_img"
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            ></motion.img>
           </motion.div>
-          {/* <div className="hero_widget_container">
-            <MovingTradingWidget />
-          </div> */}
         </div>
 
         <div className="section2-Home">

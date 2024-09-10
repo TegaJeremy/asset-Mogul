@@ -91,13 +91,13 @@ function SlideShow({ showDetail, showSpan, showPrimaryHeader, index, shows }) {
   }, [shows.length]);
 
   return (
-    <AnimatePresence>
+    <>
       {index === currentImageIndex && (
         <motion.div
           key={index} // Ensure a unique key for the current slideshow
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -100, y: 0 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          // exit={{ opacity: 0, x: 50, y: 0 }}
           transition={{ duration: 0.5 }} // Faster animation for smooth transitions
           className="slideshow slideshow-active"
         >
@@ -130,7 +130,7 @@ function SlideShow({ showDetail, showSpan, showPrimaryHeader, index, shows }) {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 }
 

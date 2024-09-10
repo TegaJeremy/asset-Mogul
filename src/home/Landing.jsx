@@ -45,7 +45,7 @@ const Landing = () => {
 
   return (
     <>
-      <div>
+      <div className="landing-tickertape">
         <TickerTapeComponent />
       </div>
       <div className="landing_body">

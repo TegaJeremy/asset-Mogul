@@ -208,10 +208,10 @@ const Register = () => {
   return (
     <>
       <div className="register-container">
-        <div className="register-first-part">
+        {/* <div className="register-first-part">
           <h1>Assest Mogul</h1>
           <p>Invest with us for a better financial independence</p>
-        </div>
+        </div> */}
 
         <div className="signUp_Page">
           <div className="signUp_PageWrapper">
