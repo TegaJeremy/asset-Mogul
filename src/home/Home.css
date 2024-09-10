@@ -89,8 +89,8 @@
 }
 
 .hero_writeup_img {
-  width: 30%;
-  max-height: 38rem;
+  /* width: 30%; */
+  /* max-height: 38rem; */
   /* background-color: red; */
   position: absolute;
   display: flex;
