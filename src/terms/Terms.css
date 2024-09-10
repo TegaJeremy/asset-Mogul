@@ -1,4 +1,4 @@
-.main{
+.main {
   width: 100%;
 }
 .details {
@@ -14,9 +14,14 @@
   align-items: center;
   position: relative;
   margin-bottom: 2rem;
-  background: 
-    linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-    url('../assets/handshaking_photo.jpg');
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.903),
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.707)
+    ),
+    url("../assets/handshaking_photo.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -30,7 +35,7 @@
   z-index: 1;
 }
 
-.header-content > p{
+.header-content > p {
   font-size: 1rem;
   line-height: 1.5;
   color: #fff;

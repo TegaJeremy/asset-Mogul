@@ -207,317 +207,352 @@ const Register = () => {
 
   return (
     <>
-      <div className="signUp_Page">
-        <div className="signUp_PageWrapper">
-          <div className="signUpCard">
-            {nextPhase && !inputError ? (
-              <form onSubmit={registerUser} className="signUpInput_Wrapper">
-                <div className="Login_LogoPart">
-                  <Link to={"/"}>
+      <div className="register-container">
+        {/* <div className="register-first-part">
+          <h1>Assest Mogul</h1>
+          <p>Invest with us for a better financial independence</p>
+        </div> */}
+
+        <div className="signUp_Page">
+          <div className="signUp_PageWrapper">
+            <div className="signUpCard">
+              {nextPhase && !inputError ? (
+                <form onSubmit={registerUser} className="signUpInput_Wrapper">
+                  <div className="Login_LogoPart">
+                    <Link to={"/"}>
+                      <img
+                        src={naxtrologo}
+                        height={120}
+                        alt="citadelLogo"
+                        className="Login_LogoPart_Img"
+                      />
+                    </Link>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "2rem",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      marginTop: "-45px",
+                    }}
+                    className="signUpForm_Header"
+                  >
+                    <span
+                      onClick={() => setNextPhase(false)}
+                      style={{
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        color: "white",
+                      }}
+                    >
+                      <IoIosArrowRoundBack />
+                      Go Back
+                    </span>
+
+                    <span className="step2">Step 2</span>
+                  </div>
+                  <div className="SignUp_InputsParts">
+                    <div className="SignUp_Inputs">
+                      <span>
+                        First Name{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        value={firstName}
+                        type="text"
+                        onChange={(e) => setfirstName(e.target.value)}
+                        placeholder="John"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Last Name{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        value={lastName}
+                        type="text"
+                        onChange={(e) => setlastName(e.target.value)}
+                        placeholder="Doe"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Address{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        value={address}
+                        type="text"
+                        onChange={(e) => setaddress(e.target.value)}
+                        placeholder="Sky way"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Zip Code{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        value={zipCode}
+                        type="number"
+                        onChange={(e) => setzipCode(e.target.value)}
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        City{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        value={city}
+                        type="text"
+                        onChange={(e) => setcity(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="SignUp_Buttons Login_Buttons">
+                    <button
+                      disabled={loading}
+                      type="submit"
+                      onClick={() => setNextPhase(true)}
+                    >
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>{" "}
+                      {loading ? (
+                        <ClipLoader color="white" size={30} />
+                      ) : (
+                        " Create Account"
+                      )}
+                    </button>
+                    <div className="Login_Route">
+                      <span>Already have an account? </span>
+                      <span
+                        onClick={() => nav("/login")}
+                        style={{
+                          color: "gold",
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Log in
+                      </span>
+                    </div>
+                  </div>
+                </form>
+              ) : (
+                <section className="signUpInput_Wrapper">
+                  <div className="Login_LogoPart">
                     <img
                       src={naxtrologo}
                       height={120}
                       alt="citadelLogo"
                       className="Login_LogoPart_Img"
                     />
-                  </Link>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "2rem",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    marginTop: "-45px",
-                  }}
-                  className="signUpForm_Header"
-                >
-                  <span
-                    onClick={() => setNextPhase(false)}
-                    style={{
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      color: "white",
-                    }}
-                  >
-                    <IoIosArrowRoundBack />
-                    Go Back
-                  </span>
+                  </div>
+                  <div className="SignUpForm_Header">
+                    <span>Create New Account</span>
+                  </div>
+                  <div className="SignUp_InputsParts">
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Username{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
 
-                  <span className="step2">Step 2</span>
-                </div>
-                <div className="SignUp_InputsParts">
-                  <div className="SignUp_Inputs">
-                    <span>
-                      First Name{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      value={firstName}
-                      type="text"
-                      onChange={(e) => setfirstName(e.target.value)}
-                      placeholder="John"
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Last Name{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      value={lastName}
-                      type="text"
-                      onChange={(e) => setlastName(e.target.value)}
-                      placeholder="Doe"
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Address{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      value={address}
-                      type="text"
-                      onChange={(e) => setaddress(e.target.value)}
-                      placeholder="Sky way"
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Zip Code{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      value={zipCode}
-                      type="number"
-                      onChange={(e) => setzipCode(e.target.value)}
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      City{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      value={city}
-                      type="text"
-                      onChange={(e) => setcity(e.target.value)}
-                    />
-                  </div>
-                </div>
-                <div className="SignUp_Buttons Login_Buttons">
-                  <button
-                    disabled={loading}
-                    type="submit"
-                    onClick={() => setNextPhase(true)}
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>{" "}
-                    {loading ? (
-                      <ClipLoader color="white" size={30} />
-                    ) : (
-                      " Create Account"
-                    )}
-                  </button>
-                  <div className="Login_Route">
-                    <span>Already have an account? </span>
-                    <span
-                      onClick={() => nav("/login")}
-                      style={{
-                        color: "gold",
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Log in
-                    </span>
-                  </div>
-                </div>
-              </form>
-            ) : (
-              <section className="signUpInput_Wrapper">
-                <div className="Login_LogoPart">
-                  <img
-                    src={naxtrologo}
-                    height={120}
-                    alt="citadelLogo"
-                    className="Login_LogoPart_Img"
-                  />
-                </div>
-                <div className="SignUpForm_Header">
-                  <span>Create New Account</span>
-                </div>
-                <div className="SignUp_InputsParts">
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Username{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
+                      <input
+                        value={userName}
+                        ref={errorType === "username" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "username" ? "1px solid red" : null,
+                        }}
+                        onChange={(e) => setUsername(e.target.value)}
+                        type="text"
+                        placeholder="JohnDoe17"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Email{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
 
-                    <input
-                      value={userName}
-                      ref={errorType === "username" ? inputRef : null}
-                      style={{
-                        border:
-                          errorType === "username" ? "1px solid red" : null,
-                      }}
-                      onChange={(e) => setUsername(e.target.value)}
-                      type="text"
-                      placeholder="JohnDoe17"
-                    />
+                      <input
+                        value={email}
+                        ref={errorType === "email" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "email" ? "1px solid red" : null,
+                        }}
+                        onChange={(e) => setemail(e.target.value)}
+                        type="text"
+                        placeholder="johnDoe@me.com"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Country{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <select
+                        value={country}
+                        ref={errorType === "country" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "country" ? "1px solid red" : null,
+                        }}
+                        type="text"
+                        onChange={(e) => {
+                          setCountry(e.target.value);
+                        }}
+                        placeholder="Nigeria"
+                      >
+                        <option value="">Select Your Country</option>
+                        {countries.map((country) => (
+                          <option key={country.country} value={country.country}>
+                            {country.country} ({country.code})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="SignUp_Inputs" id="signup-special">
+                      <span>
+                        Mobile Number{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <h4 className="Country_Code">
+                        {!country ? countries[0].code : code[0]?.code}
+                      </h4>
+                      <input
+                        value={mobile}
+                        ref={errorType === "mobile" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "mobile" ? "1px solid red" : null,
+                        }}
+                        type="number"
+                        onChange={(e) => setmobile(e.target.value)}
+                        placeholder="00000000"
+                        id="special-input"
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Password{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        value={password}
+                        ref={errorType === "password" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "password" ? "1px solid red" : null,
+                        }}
+                        onChange={(e) => setpassword(e.target.value)}
+                        placeholder="8 characters, incl 1 uppercase, lowercase and no "
+                      />
+                      <img
+                        src={visibilityIcon}
+                        alt="showPassword"
+                        className="showPassword"
+                        style={{
+                          padding: "3%",
+                          top: "70%",
+                          right: "1%",
+                        }}
+                        onClick={() =>
+                          setShowPassword((prevState) => !prevState)
+                        }
+                      />
+                    </div>
+                    <div className="SignUp_Inputs">
+                      <span>
+                        Confirm Password{" "}
+                        <span style={{ color: "red", fontSize: "16px" }}>
+                          *
+                        </span>
+                      </span>
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        value={confirmPassword}
+                        ref={errorType === "confirmpassword" ? inputRef : null}
+                        style={{
+                          border:
+                            errorType === "password" ||
+                            errorType === "confirmpassword"
+                              ? "1px solid red"
+                              : null,
+                        }}
+                        onChange={(e) => setconfirmPassword(e.target.value)}
+                        placeholder="8 characters, incl 1 uppercase, lowercase and no "
+                      />
+                      <img
+                        src={visibilityIcon}
+                        alt="showPassword"
+                        className="showPassword"
+                        style={{
+                          padding: "3%",
+                          top: "70%",
+                          right: "1%",
+                        }}
+                        onClick={() =>
+                          setShowPassword((prevState) => !prevState)
+                        }
+                      />
+                    </div>
                   </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Email{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-
-                    <input
-                      value={email}
-                      ref={errorType === "email" ? inputRef : null}
-                      style={{
-                        border: errorType === "email" ? "1px solid red" : null,
-                      }}
-                      onChange={(e) => setemail(e.target.value)}
-                      type="text"
-                      placeholder="johnDoe@me.com"
-                    />
+                  <div className="SignUp_Buttons">
+                    <button onClick={goToPhaseTwo}>
+                      {" "}
+                      {nextPhaseLoading ? (
+                        <ClipLoader color="white" size={30} />
+                      ) : (
+                        "Next"
+                      )}
+                    </button>
+                    <div className="Login_Route">
+                      <span>Already have an account? </span>
+                      <span
+                        onClick={() => nav("/login")}
+                        style={{
+                          color: "gold",
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Log in
+                      </span>
+                    </div>
                   </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Country{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <select
-                      value={country}
-                      ref={errorType === "country" ? inputRef : null}
-                      style={{
-                        border:
-                          errorType === "country" ? "1px solid red" : null,
-                      }}
-                      type="text"
-                      onChange={(e) => {
-                        setCountry(e.target.value);
-                      }}
-                      placeholder="Nigeria"
-                    >
-                      <option value="">Select Your Country</option>
-                      {countries.map((country) => (
-                        <option key={country.country} value={country.country}>
-                          {country.country} ({country.code})
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="SignUp_Inputs" id="signup-special">
-                    <span>
-                      Mobile Number{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <h4 className="Country_Code">
-                      {!country ? countries[0].code : code[0]?.code}
-                    </h4>
-                    <input
-                      value={mobile}
-                      ref={errorType === "mobile" ? inputRef : null}
-                      style={{
-                        border: errorType === "mobile" ? "1px solid red" : null,
-                      }}
-                      type="number"
-                      onChange={(e) => setmobile(e.target.value)}
-                      placeholder="00000000"
-                      id="special-input"
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Password{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      value={password}
-                      ref={errorType === "password" ? inputRef : null}
-                      style={{
-                        border:
-                          errorType === "password" ? "1px solid red" : null,
-                      }}
-                      onChange={(e) => setpassword(e.target.value)}
-                      placeholder="8 characters, incl 1 uppercase, lowercase and no "
-                    />
-                    <img
-                      src={visibilityIcon}
-                      alt="showPassword"
-                      className="showPassword"
-                      style={{
-                        padding: "3%",
-                        top: "70%",
-                        right: "1%",
-                      }}
-                      onClick={() => setShowPassword((prevState) => !prevState)}
-                    />
-                  </div>
-                  <div className="SignUp_Inputs">
-                    <span>
-                      Confirm Password{" "}
-                      <span style={{ color: "red", fontSize: "16px" }}>*</span>
-                    </span>
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      value={confirmPassword}
-                      ref={errorType === "confirmpassword" ? inputRef : null}
-                      style={{
-                        border:
-                          errorType === "password" ||
-                          errorType === "confirmpassword"
-                            ? "1px solid red"
-                            : null,
-                      }}
-                      onChange={(e) => setconfirmPassword(e.target.value)}
-                      placeholder="8 characters, incl 1 uppercase, lowercase and no "
-                    />
-                    <img
-                      src={visibilityIcon}
-                      alt="showPassword"
-                      className="showPassword"
-                      style={{
-                        padding: "3%",
-                        top: "70%",
-                        right: "1%",
-                      }}
-                      onClick={() => setShowPassword((prevState) => !prevState)}
-                    />
-                  </div>
-                </div>
-                <div className="SignUp_Buttons">
-                  <button onClick={goToPhaseTwo}>
-                    {" "}
-                    {nextPhaseLoading ? (
-                      <ClipLoader color="white" size={30} />
-                    ) : (
-                      "Next"
-                    )}
-                  </button>
-                  <div className="Login_Route">
-                    <span>Already have an account? </span>
-                    <span
-                      onClick={() => nav("/login")}
-                      style={{
-                        color: "gold",
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Log in
-                    </span>
-                  </div>
-                </div>
-              </section>
-            )}
+                </section>
+              )}
+            </div>
           </div>
         </div>
       </div>

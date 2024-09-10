@@ -1,35 +1,40 @@
-.MainContainerAbout{
+.MainContainerAbout {
   width: 100%;
   height: max-content;
 }
 
-.section1_container{
+.section1_container {
   width: 100%;
   padding: 6rem 4rem;
-  background: 
-  linear-gradient(to left, rgba(0, 0, 0, 0.757), rgba(0, 0, 0, 0.765), rgba(0, 0, 0, 0.552)), 
-  url('../assets/blogImage06.jpg');
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.757),
+      rgba(0, 0, 0, 0.765),
+      rgba(0, 0, 0, 0.552)
+    ),
+    url("../assets/blogImage06.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.section1_container > p{
-  font-family: 'Poppins', sans-serif;
+.section1_container > p {
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-size: 1.2rem;
 }
 
-.section1_container > h1{
-  font-family: 'Poppins', sans-serif;
+.section1_container > h1 {
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-size: 2.2rem;
 }
 
-.section2_container{
+.section2_container {
   width: 100%;
   padding: 2rem 4rem;
   display: flex;
@@ -37,53 +42,58 @@
   margin-top: 40px;
 }
 
-.section2_text_container{
+.section2_text_container {
   width: 48%;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.section2_text_container > h3{
-  font-family: 'Roboto', sans-serif;
+.section2_text_container > h3 {
+  font-family: "Roboto", sans-serif;
   color: #000;
   font-size: 2rem;
   font-weight: 600;
 }
 
-.section2_text_container > p{
-  font-family: 'Inter', sans-serif;
+.section2_text_container > p {
+  font-family: "Inter", sans-serif;
   color: #000;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.8rem;
 }
 
-.section2_img_container{
+.section2_img_container {
   width: 48%;
   height: 400px;
 }
 
-.section2_img_container > img{
+.section2_img_container > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
 }
 
-.section3_container{
+.section3_container {
   width: 100%;
   padding: 6rem 4rem;
-  background: 
-  linear-gradient(to left, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.894), rgba(0, 0, 0, 0.853)), 
-  url('../assets/blogImage06.jpg');
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.894),
+      rgba(0, 0, 0, 0.853)
+    ),
+    url("../assets/blogImage06.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 50px 0px;
 }
 
-.section3_item_container{
+.section3_item_container {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -91,129 +101,128 @@
   /* background-color: red; */
 }
 
-.section3_item_container > h1{
-  font-family: 'Inter', sans-serif;
+.section3_item_container > h1 {
+  font-family: "Inter", sans-serif;
   color: #fff;
   font-size: 2.3rem;
   line-height: 3.4rem;
 }
 
-.about_features_access_container{
+.about_features_access_container {
   width: 100%;
   display: flex;
   gap: 50px;
 }
 
-.about_features_container,.about_access_container{
+.about_features_container,
+.about_access_container {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.about_features_container > p, .about_access_container > p{
+.about_features_container > p,
+.about_access_container > p {
   color: grey;
   font-size: 0.9rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
-.about_features_container > h2 ,.about_access_container > h2{
+.about_features_container > h2,
+.about_access_container > h2 {
   color: #fff;
   font-size: 1.4rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-.about_access_container{
+.about_access_container {
   border-left: 1px solid #fff;
   padding-left: 30px;
 }
 
-.goal_listing_container{
+.goal_listing_container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.goal_list_container{
+.goal_list_container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.goal_list_icon{
+.goal_list_icon {
   color: blue;
   font-size: 1rem;
 }
 
-.goal_list_container > p{
+.goal_list_container > p {
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #fff;
 }
 
-.section3_item_container > p{
+.section3_item_container > p {
   font-size: 0.9rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: #fff;
 }
 
-.section3_item_container > p > span{
+.section3_item_container > p > span {
   color: blue;
 }
 
-
-
-
-@media (max-width:768px) {
-
-  .section1_container{
+@media (max-width: 768px) {
+  .section1_container {
     padding: 4rem 10px;
   }
 
-  .section1_container > h1{
+  .section1_container > h1 {
     font-size: 1.8rem;
   }
 
-  .section2_container{
+  .section2_container {
     flex-direction: column-reverse;
     padding: 2rem 10px;
     gap: 20px;
   }
 
-  .section2_img_container{
+  .section2_img_container {
     width: 100%;
     height: 300px;
   }
 
-  .section2_text_container{
+  .section2_text_container {
     width: 100%;
   }
-  
-  .section3_container{
+
+  .section3_container {
     padding: 4rem 10px;
   }
 
-  .section3_item_container{
+  .section3_item_container {
     width: 100%;
   }
 
-  .section3_item_container > p{
+  .section3_item_container > p {
     line-height: 1.6rem;
   }
 
-  .about_features_access_container{
+  .about_features_access_container {
     gap: 20px;
   }
-  
-  .about_features_container > h2 ,.about_access_container > h2{
+
+  .about_features_container > h2,
+  .about_access_container > h2 {
     font-size: 1.2rem;
   }
-  
-  .about_access_container{
+
+  .about_access_container {
     padding-left: 20px;
   }
-
 }

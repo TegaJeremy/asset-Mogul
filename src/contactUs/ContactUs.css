@@ -1,126 +1,127 @@
-.contact_us_body{
-    width: 100%;
-    height: max-content;
+.contact_us_body {
+  width: 100%;
+  height: max-content;
 }
 
-.contact_us_section1_container{
-    width: 100%;
-    padding: 6rem 4rem;
-    background: 
-    linear-gradient(to left, rgba(0, 0, 0, 0.757), rgba(0, 0, 0, 0.765), rgba(0, 0, 0, 0.552)), 
-    url('../assets/blogImage06.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+.contact_us_section1_container {
+  width: 100%;
+  padding: 6rem 4rem;
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.757),
+      rgba(0, 0, 0, 0.765),
+      rgba(0, 0, 0, 0.552)
+    ),
+    url("../assets/blogImage06.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 50px;
+}
+
+.contact_us_section1_container > p {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.contact_us_section1_container > h1 {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.contact_us_section2_container {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.contact_us_section2_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_us_section2_top > button {
+  padding: 1.2rem 4rem;
+  height: max-content;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact_us_section2_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.support_card_container {
+  width: 23.6%;
+  background-color: #f2f2f5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+}
+
+.support_card_icon {
+  background-color: #fff;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support_card_container > p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.support_icon {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contact_us_section1_container {
+    padding: 4rem 10px;
+  }
+
+  .contact_us_section1_container > h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact_us_section2_container {
+    padding: 2rem 10px;
+  }
+
+  .contact_us_section2_top {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .basics_of_investing_container_top_text {
     gap: 6px;
-    margin-bottom: 50px;
-}
+  }
 
-.contact_us_section1_container > p{
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 1.2rem;
-}
-  
-.contact_us_section1_container > h1{
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 2.2rem;
-}
-
-.contact_us_section2_container{
+  .support_card_container {
     width: 100%;
-    padding: 2rem 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.contact_us_section2_top{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact_us_section2_top > button{
-    padding: 1.2rem 4rem;
-    height: max-content;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact_us_section2_bottom{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.support_card_container{
-    width: 23.6%;
-    background-color: #F2F2F5;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px;
-}
-
-.support_card_icon{
-    background-color: #fff;
-    width: 3.6rem;
-    height: 3.6rem;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.support_card_container > p{
-    font-family: 'Inter',sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.support_icon{
-    font-size: 1.4rem;
-}
-
-
-
-@media screen and (max-width: 768px){
-
-    .contact_us_section1_container{
-        padding: 4rem 10px;
-    }
-    
-    .contact_us_section1_container > h1{
-        font-size: 1.8rem;
-    }
-
-    .contact_us_section2_container{
-        padding: 2rem 10px;
-    }
-
-    .contact_us_section2_top{
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .basics_of_investing_container_top_text{
-        gap: 6px;
-    }
-
-    .support_card_container{
-        width: 100%;
-    }
-
+  }
 }
