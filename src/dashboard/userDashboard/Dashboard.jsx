@@ -18,6 +18,7 @@ import { BounceLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import GeneralNumbers from "./GeneralNumbers";
 import InsightChart from "./InsightChart";
+import ProgressBar from "./ProgressBar";
 
 const Dashboard = () => {
   const nav = useNavigate();
@@ -111,6 +112,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-content-container">
       <div className="dashboard-content-body">
+        <ProgressBar/>
         {
           AdminUser.isAdmin ? <GeneralNumbers/> : null
         }

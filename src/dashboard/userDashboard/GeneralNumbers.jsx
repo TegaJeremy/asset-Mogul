@@ -30,9 +30,9 @@ const GeneralNumbers = () => {
 
     const getTotalDeposit = ()=>{
 
-        fetch('https://asset-mogul-back.onrender.com/unverifiedCount', { method: 'GET' })
+        fetch('https://asset-mogul-back.onrender.com/getTotalDepositsForAllUsr', { method: 'GET' })
             .then(response => response.json())
-            .then(data => setTotalDeposit(data.count))
+            .then(data => setTotalDeposit(data.totalAmount))
             .catch(error => console.error('Error:', error));
 
     }

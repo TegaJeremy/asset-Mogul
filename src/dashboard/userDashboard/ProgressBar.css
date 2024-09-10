@@ -1,0 +1,58 @@
+.progress_bar_body{
+    width: 100%;
+}
+
+.trading_progress_container{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.trading_progress_container > p{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.progress-container {
+    width: 100%;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .progress-container > p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: navy;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 4px; 
+    transition: width 0.1s ease;
+  }
+  
+  .progress_bar_body button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+  }
+  
