@@ -234,7 +234,7 @@ const Register = () => {
                       gap: "2rem",
                       justifyContent: "space-around",
                       alignItems: "center",
-                      marginTop: "-45px",
+                      // marginTop: "-45px",
                     }}
                     className="signUpForm_Header"
                   >
@@ -245,13 +245,14 @@ const Register = () => {
                         display: "flex",
                         alignItems: "center",
                         color: "white",
+                        fontSize: "20px"
                       }}
                     >
                       <IoIosArrowRoundBack />
                       Go Back
                     </span>
 
-                    <span className="step2">Step 2</span>
+                    {/* <span className="step2">Step 2</span> */}
                   </div>
                   <div className="SignUp_InputsParts">
                     <div className="SignUp_Inputs">
@@ -329,12 +330,20 @@ const Register = () => {
                       type="submit"
                       onClick={() => setNextPhase(true)}
                     >
+                      {/* <span></span>
                       <span></span>
                       <span></span>
-                      <span></span>
-                      <span></span>{" "}
+                      <span></span>{" "} */}
                       {loading ? (
-                        <ClipLoader color="white" size={30} />
+                        <ClipLoader
+                        id="clipLoader"
+                        display="block"
+                        position="absolute"
+                        top="4px"
+                        left="4px"
+                        color="#c48742"
+                      />
+                        // <ClipLoader color="white" size={30} />
                       ) : (
                         " Create Account"
                       )}
