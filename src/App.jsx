@@ -43,7 +43,7 @@ import DeleteUser from "./dashboard/DeleteUser/DeleteUser";
 
 import ScrollToTop from "./ScrollToTop";
 
-import thePrivate from "./components/thePrivate";
+import PrivateRoute from "./components/PrivateRoute";
 import MarketNews from "./marketNews/MarketNews";
 import { useTranslation } from "react-i18next";
 
@@ -70,33 +70,34 @@ function App() {
             <Route path="/forget_password" element={<ForgetPassword />} />
 
             {/* <Route path="/userDashboard/*" element={<Private />}></Route> */}
-            <Route element={<thePrivate />}></Route>
-            <Route element={<UserMenu />}>
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/investment" element={<Investments />} />
-              <Route path="/deposit" element={<Deposit />} />
-              <Route path="/withdraw" element={<Withdraw />} />
-              <Route path="/changepassword" element={<ChangePassword />} />
-              <Route path="/assignmoney" element={<AssignMoney />} />
-              <Route path="/assignprofit" element={<AssignProfit />} />
-              <Route path="/delete-user" element={<DeleteUser />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/user-details" element={<UserDetails />} />
-              <Route
-                path="/profile-setting"
-                element={<ProfileSettingPage user={AdminUser} />}
-              />
-              <Route path="/kyc" element={<Kyc />} />
-              <Route path="/twoFA" element={<TwoFA />} />
-              <Route path="/pending-kyc" element={<PendingKyc />} />
-              <Route path="/pending-tickets" element={<PendingTickets />} />
-              <Route path="/referral" element={<Referral />} />
-              <Route path="/supportTicket" element={<SupportTicket />} />
-              <Route path="/transaction" element={<Transaction />} />
-              <Route
-                path="/scheduleInvestment"
-                element={<ScheduleInvestment />}
-              />
+            <Route element={<PrivateRoute />}>
+              <Route element={<UserMenu />}>
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/investment" element={<Investments />} />
+                <Route path="/deposit" element={<Deposit />} />
+                <Route path="/withdraw" element={<Withdraw />} />
+                <Route path="/changepassword" element={<ChangePassword />} />
+                <Route path="/assignmoney" element={<AssignMoney />} />
+                <Route path="/assignprofit" element={<AssignProfit />} />
+                <Route path="/delete-user" element={<DeleteUser />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/user-details" element={<UserDetails />} />
+                <Route
+                  path="/profile-setting"
+                  element={<ProfileSettingPage user={AdminUser} />}
+                />
+                <Route path="/kyc" element={<Kyc />} />
+                <Route path="/twoFA" element={<TwoFA />} />
+                <Route path="/pending-kyc" element={<PendingKyc />} />
+                <Route path="/pending-tickets" element={<PendingTickets />} />
+                <Route path="/referral" element={<Referral />} />
+                <Route path="/supportTicket" element={<SupportTicket />} />
+                <Route path="/transaction" element={<Transaction />} />
+                <Route
+                  path="/scheduleInvestment"
+                  element={<ScheduleInvestment />}
+                />
+              </Route>
             </Route>
           </Routes>
         </BrowserRouter>
