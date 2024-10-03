@@ -46,6 +46,7 @@ function Profile({ user }) {
   const location = useLocation();
   async function LogoutUser() {
     navigate("/");
+    localStorage.removeItem("token")
   }
 
   const getHeaderText = () => {

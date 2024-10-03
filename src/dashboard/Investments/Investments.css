@@ -124,6 +124,10 @@
   /* height: 28%; */
 }
 
+.investment-card-sub-details > p{
+  color: #fff;
+  line-height: 30px;
+}
 .BotInvestment_Card article button {
   border: none;
   /* margin-top: 1rem; */
