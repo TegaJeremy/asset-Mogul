@@ -218,6 +218,7 @@ const UserMenu = () => {
       );
       dispatch(userResData([]));
       console.log(response);
+      localStorage.removeItem("token")
     } catch (err) {
       console.log(err);
       setLoading(true);
