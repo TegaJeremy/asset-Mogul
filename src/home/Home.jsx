@@ -18,6 +18,7 @@ import CountUp from "react-countup";
 import earth from "../assets/earth.png";
 
 import { useTranslation } from "react-i18next";
+import TestimonialSection from "../components/testimonal/TestimonalSection";
 const Home = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -353,6 +354,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <TestimonialSection />
         <div className="section3-Home">
           <div className="section3-Home-Header">
             <h4>OUR INVESTMENT PLANS</h4>

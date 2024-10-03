@@ -1,0 +1,61 @@
+/* TestimonialSection.module.css */
+.container {
+  margin: 2rem 0 4rem;
+  width: 100%;
+  padding: 20px;
+}
+
+.h2 {
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.h3 {
+  font-size: 1.4rem;
+  font-size: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.card {
+  background-color: #2e191965;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.role {
+  font-size: 1rem;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 2% 0;
+  }
+}
