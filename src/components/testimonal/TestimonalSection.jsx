@@ -68,8 +68,13 @@ const testimonials = [
 const TestimonialSection = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.h2}>What Our Customers say</h2>
       <h3 className={styles.h3}>Testimonals</h3>
+      <h2 className={styles.h2}>What Our Customers say</h2>
+      <p className={styles.p}>
+        We place huge value on strong relationships and have seen the benefits
+        they bring to our businees. Customer feedback is vital in helping us to
+        get it right.
+      </p>
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
