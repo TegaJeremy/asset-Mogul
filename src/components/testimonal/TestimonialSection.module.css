@@ -6,15 +6,24 @@
 }
 
 .h2 {
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 600;
+  text-align: center;
+}
+
+.p {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 
 .h3 {
-  font-size: 1.4rem;
-  font-size: 600;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .card {
@@ -26,6 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 22rem;
 }
 
 .photo {
@@ -36,13 +46,16 @@
 }
 
 .quote {
+  margin-top: 1rem;
   font-size: 1.1rem;
   font-style: italic;
   color: #555;
+  line-height: 1.5;
   margin-bottom: 10px;
 }
 
 .name {
+  margin-top: 1rem;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5px;
@@ -57,5 +70,11 @@
 @media (max-width: 600px) {
   .container {
     margin: 2% 0;
+  }
+  .name {
+    margin-top: 0.31rem;
+  }
+  .p {
+    max-width: 99%;
   }
 }
