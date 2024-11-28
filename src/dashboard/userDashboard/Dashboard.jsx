@@ -61,6 +61,26 @@ const Dashboard = () => {
     }
   }
 
+  async function getPendingDeposit() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getPendingDeposit/${id}`
+      );
+      console.log(response);
+      setPendingDeposit(response?.data?.pendingDeposit);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
   async function getLastDeposit() {
     try {
       const response = await axios.get(
@@ -84,10 +104,10 @@ const Dashboard = () => {
   async function getTotalWithdrawal() {
     try {
       const response = await axios.get(
-        `https://asset-mogul-back.onrender.com/getTotalWithdrawals/${id}`
+        `https://asset-mogul-back.onrender.com/getTotalWithdraw/${id}`
       );
       console.log(response);
-      setTotalWithdrawal(response?.data?.totalWithdrawalAmount);
+      setTotalWithdrawal(response?.data?.totalWithdraw);
     } catch (err) {
       console.log(err);
       if (err?.message === " Network Error") {
@@ -279,6 +299,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     getTotalDeposit();
+    getPendingDeposit();
     getLastDeposit();
     getTotalWithdrawal();
     getPendingwithdrawl();
