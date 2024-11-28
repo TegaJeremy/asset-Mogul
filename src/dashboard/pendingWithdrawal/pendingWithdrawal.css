@@ -1,0 +1,117 @@
+.pending_withdrawal_body{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px 60px;
+}
+
+.pending_withdrawal_body h3{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.transaction_history_container{
+    width: 100%;
+    max-width: 100%;
+    height: 90%;
+    max-height: 80%;
+    background-color: transparent;
+    margin-top: 40px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    overflow: auto;
+}
+.transaction_history_container table{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    table-layout: fixed;
+}
+th,td{
+    width: auto;
+    border-top: none;
+    border: 1px solid #fff;
+    text-align: left;
+    padding: 10px 10px;
+}
+th{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+    background-color: red;
+}
+td{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 300px;
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 300px;
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 300px;
+}
+th:nth-child(4), td:nth-child(4) {
+    width: 300px;
+}
+th:nth-child(5), td:nth-child(5) {
+    width: 300px;
+}
+th:nth-child(6), td:nth-child(6) {
+    width: 300px;
+}
+th:nth-child(7), td:nth-child(7) {
+    width: 300px;
+}
+th:nth-child(7), td:nth-child(8) {
+    width: 300px;
+}
+
+.transaction_history_container::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+    height: 2px; /* Height of the horizontal scrollbar */
+}
+
+/* Customize the scrollbar track */
+.transaction_history_container::-webkit-scrollbar-track {
+    background: white; /* Color of the track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+.transaction_history_container::-webkit-scrollbar-thumb {
+    background: red; /* Color of the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Change color on hover */
+.transaction_history_container::-webkit-scrollbar-thumb:hover {
+    background: grey; /* Color of the thumb when hovered */
+}
+
+.status_btn{
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.accept_btn{
+    background-color: green;
+}
+
+.reject_btn{
+    background-color: red;
+}

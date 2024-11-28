@@ -46,6 +46,7 @@ import ScrollToTop from "./ScrollToTop";
 import PrivateRoute from "./components/PrivateRoute";
 import MarketNews from "./marketNews/MarketNews";
 import { useTranslation } from "react-i18next";
+import PendingWithdrawal from "./dashboard/pendingWithdrawal/PendingWithdrawal";
 
 function App() {
   const AdminUser = useSelector((state) => state.BTC.userRes);
@@ -90,6 +91,7 @@ function App() {
                 <Route path="/twoFA" element={<TwoFA />} />
                 <Route path="/pending-kyc" element={<PendingKyc />} />
                 <Route path="/pending-tickets" element={<PendingTickets />} />
+                <Route path="/pending-withdrawal" element={<PendingWithdrawal/>} /> 
                 <Route path="/referral" element={<Referral />} />
                 <Route path="/supportTicket" element={<SupportTicket />} />
                 <Route path="/transaction" element={<Transaction />} />

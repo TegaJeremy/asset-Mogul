@@ -328,4 +328,8 @@
     margin-top: 0.4rem;
     font-size: 1rem;
   }
+
+  .balance_section_card_container{
+    width: 100%;
+  }
 }

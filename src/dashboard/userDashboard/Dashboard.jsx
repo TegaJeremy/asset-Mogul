@@ -19,13 +19,24 @@ import { Link } from "react-router-dom";
 import GeneralNumbers from "./GeneralNumbers";
 import InsightChart from "./InsightChart";
 import ProgressBar from "./ProgressBar";
+import { TbArrowWaveRightUp } from "react-icons/tb";
 
 const Dashboard = () => {
   const nav = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [totalDeposit, setTotalDeposit] = useState(0);
+  const [lastDeposit, setLastDeposit] = useState(0);
+  const [rejectedDeposit, setRejectedDeposit] = useState(0);
+  const [pendingDeposit, setPendingDeposit] = useState(0);
   const [totalWithdrawal, setTotalWithdrawal] = useState(0);
+  const [pendingWithdrawal, setPendingWithdrawal] = useState(0);
+  const [rejectedWithdrawal, setRejectedWithdrawal] = useState(0);
+  const [lastWithdrawal, setLastWithdrawal] = useState(0);
+  const [nitInterestApi, setnitInterestApi] = useState(0);
+  const [lastInvestment, setLastInvestment] = useState(0);
+  const [runningInvestment, setRunningInvestment] = useState(0);
+  const [completedInvestment, setCompletedInvestment] = useState(0);
   const [lastestTransaction, setlastestTransaction] = useState({});
   const { id } = useSelector((state) => state.BTC.user);
   const AdminUser = useSelector((state) => state.BTC.userRes);
@@ -50,13 +61,176 @@ const Dashboard = () => {
     }
   }
 
+  async function getLastDeposit() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getLastDeposit/${id}`
+      );
+      console.log(response);
+      setLastDeposit(response?.data?.amount);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
   async function getTotalWithdrawal() {
     try {
       const response = await axios.get(
-        `https://asset-mogul-back.onrender.com/getTotalWithdraw/${id}`
+        `https://asset-mogul-back.onrender.com/getTotalWithdrawals/${id}`
       );
       console.log(response);
-      setTotalWithdrawal(response?.data?.totalWithdraw);
+      setTotalWithdrawal(response?.data?.totalWithdrawalAmount);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function getPendingwithdrawl() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getPendingwithdrawl/${id}`
+      );
+      console.log(response);
+      setPendingWithdrawal(response?.data?.PendingWithdraw);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function RejectedWithdral() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/RejectedWithdral/${id}`
+      );
+      console.log(response);
+      setRejectedWithdrawal(response?.data?.rejectedWithdraw);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function getLastWithdrawal() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getLastWithdrawal/${id}`
+      );
+      console.log(response);
+      setLastWithdrawal(response?.data?.amount);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function getIntersetWallet() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getUserIntrestWallet/${id}`
+      );
+      console.log(response);
+      setnitInterestApi(response.data?.intrestWallet);
+    } catch (err) {
+      console.log(err);
+      if (err.message === "Network Error") {
+        toast.error("No internet Connection");
+        setLoading(false);
+      } else if (err?.response?.data?.message === "jwt expired") {
+        navigate("/login");
+        dispatch(expireSession(true));
+      } else {
+        setLoading(false);
+        toast.error(err.response?.data?.message);
+        setLoading(false);
+      }
+    }
+  }
+
+  async function getLastInvestment() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getLastInvestment/${id}`
+      );
+      console.log(response);
+      setLastInvestment(response?.data?.amount);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function getRunningInvestment() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getRunningInvestment/${id}`
+      );
+      console.log(response);
+      setRunningInvestment(response?.data?.amount);
+    } catch (err) {
+      console.log(err);
+      if (err?.message === " Network Error") {
+        toast.error("Bad Internet Connection");
+      } else if (err?.response?.data?.message === "jwt expired") {
+        nav("/login");
+        dispatch(expireSession(true));
+      } else {
+        toast.error(err?.response?.data?.message);
+      }
+    }
+  }
+
+  async function getCompletedInvestment() {
+    try {
+      const response = await axios.get(
+        `https://asset-mogul-back.onrender.com/getCompletedInvestment/${id}`
+      );
+      console.log(response);
+      setCompletedInvestment(response?.data?.amount);
     } catch (err) {
       console.log(err);
       if (err?.message === " Network Error") {
@@ -105,7 +279,15 @@ const Dashboard = () => {
 
   useEffect(() => {
     getTotalDeposit();
+    getLastDeposit();
     getTotalWithdrawal();
+    getPendingwithdrawl();
+    RejectedWithdral();
+    getLastWithdrawal();
+    getIntersetWallet();
+    getLastInvestment();
+    getRunningInvestment();
+    getCompletedInvestment();
     getLatestTransaction();
   }, []);
 
@@ -113,6 +295,74 @@ const Dashboard = () => {
     <div className="dashboard-content-container">
       <div className="dashboard-content-body">
         <ProgressBar/>
+        <div className="balance_section_body">
+          <div className="balance_section_card_container">
+            <div className="balance_section_card_top">
+              <div className="balance_section_card_logo"></div>
+              <p>Total Deposit</p>
+              <TbArrowWaveRightUp className="arrow_wave"/>
+            </div>
+            <h3>${totalDeposit}</h3>
+            <div className="balance_section_card_bottom">
+              <div className="balance_section_card_bottom_text_container addWidth">
+                <p>Last Deposit</p>
+                <h3>${lastDeposit}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Pending</p>
+                <h3>${pendingDeposit}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Rejected</p>
+                <h3>$0</h3>
+              </div>
+            </div>
+          </div>
+          <div className="balance_section_card_container">
+            <div className="balance_section_card_top">
+              <div className="balance_section_card_logo"></div>
+              <p>Total Withdrawal</p>
+              <TbArrowWaveRightUp className="arrow_wave"/>
+            </div>
+            <h3>${totalWithdrawal}</h3>
+            <div className="balance_section_card_bottom">
+              <div className="balance_section_card_bottom_text_container addWidth">
+                <p>Last Withdraw</p>
+                <h3>${lastWithdrawal}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Pending</p>
+                <h3>${pendingWithdrawal}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Rejected</p>
+                <h3>${rejectedWithdrawal}</h3>
+              </div>
+            </div>
+          </div>
+          <div className="balance_section_card_container">
+            <div className="balance_section_card_top">
+              <div className="balance_section_card_logo"></div>
+              <p>Interest Balance</p>
+              <TbArrowWaveRightUp className="arrow_wave"/>
+            </div>
+            <h3>${nitInterestApi}</h3>
+            <div className="balance_section_card_bottom">
+              <div className="balance_section_card_bottom_text_container addWidth">
+                <p>Last Invest</p>
+                <h3>${lastInvestment}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Running</p>
+                <h3>${runningInvestment}</h3>
+              </div>
+              <div className="balance_section_card_bottom_text_container">
+                <p>Completed</p>
+                <h3>${completedInvestment}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
         {
           AdminUser.isAdmin ? <GeneralNumbers/> : null
         }

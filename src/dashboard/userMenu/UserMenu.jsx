@@ -454,6 +454,17 @@ const UserMenu = () => {
                     </div>
                   </div>
                 </NavLink>
+
+                <NavLink to='/pending-withdrawal' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'}>
+                  <div className="user-dashboard-menu-changePassword-container">
+                    <div className="user-dashboard-menu-changePassword-container-icon">
+                      <MdDelete className= "user-dashboard-menu-changePassword-icon"/>
+                    </div>
+                    <div className="user-dashboard-menu-changePassword-container-title">
+                      Pending Withdrawal
+                    </div>
+                  </div>
+                </NavLink>
               </>
             ) : null}
             <div className="user-dashboard-left-menu-logout">
@@ -711,8 +722,8 @@ const UserMenu = () => {
                 </NavLink>
 
                 <NavLink to='/delete-user' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'} onClick={() => {
-                setMenu(false);
-              }}>
+                  setMenu(false);
+                }}>
                   <div className="user-dashboard-menu-changePassword-container">
                     <div className="user-dashboard-menu-changePassword-container-icon">
                       <MdDelete className= "user-dashboard-menu-changePassword-icon"/>
@@ -726,8 +737,8 @@ const UserMenu = () => {
                 </NavLink>
 
                 <NavLink to='/pending-kyc' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'} onClick={() => {
-                setMenu(false);
-              }}>
+                  setMenu(false);
+                }}>
                   <div className="user-dashboard-menu-changePassword-container">
                     <div className="user-dashboard-menu-changePassword-container-icon">
                       <MdDelete className= "user-dashboard-menu-changePassword-icon"/>
@@ -735,6 +746,21 @@ const UserMenu = () => {
                     <div className="user-dashboard-menu-changePassword-container-title">
                       <p>
                         Pending KYC
+                      </p>
+                    </div>
+                  </div>
+                </NavLink>
+
+                <NavLink to='/pending-withdrawal' className={({ isActive }) => isActive ? 'user-dashboard-left-menu-changePassword-active' : 'user-dashboard-left-menu-changePassword'} onClick={() => {
+                  setMenu(false);
+                }}>
+                  <div className="user-dashboard-menu-changePassword-container">
+                    <div className="user-dashboard-menu-changePassword-container-icon">
+                      <MdDelete className= "user-dashboard-menu-changePassword-icon"/>
+                    </div>
+                    <div className="user-dashboard-menu-changePassword-container-title">
+                      <p>
+                        Pending Withdrawal
                       </p>
                     </div>
                   </div>

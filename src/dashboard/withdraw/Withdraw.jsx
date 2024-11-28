@@ -27,22 +27,43 @@ const Withdraw = () => {
   const dispatch = useDispatch();
   const nav = useNavigate();
   const [withdrawal, setWithdrawal] = useState("");
+  const [method, setMethod] = useState("")
+  const [walletName, setWalletName] = useState("");
+  const [walletAddress, setWalletAddress] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [accountHolderName, setAccountHolderName] = useState("");
+  const [swiftCode, setSwiftCode] = useState("");
+  const [routingNumber, setRoutingNumber] = useState("");
   const [usd, setUsd] = useState(0);
   const user = useSelector((state) => state.BTC.userRes);
   const [loading, setLoading] = useState(false);
   const [emptyGateway, setEmptyGateway] = useState(false);
-  console.log(user);
   const [select, setSelect] = useState();
 
+
   async function withdrawDollars(e) {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
+    let dataValue;
+    if(method == "crypto"){
+      dataValue = {method: method, walletName: walletName, walletAddress: walletAddress, amount: usd }
+    } else {
+      dataValue = {method: method, bankName: bankName, accountNumber: accountNumber, accountHolderName: accountHolderName, swiftCode: swiftCode, routingNumber: routingNumber, amount: usd }
+    }
     try {
-      const formData = new FormData();
-      formData.append("usd", usd);
+      // const formData = new FormData();
+      // formData.append("method", method);
+      // formData.append("walletName", walletName);
+      // formData.append("walletAddress", walletAddress);
+      // formData.append("bankName", bankName);
+      // formData.append("accountNumber", accountNumber);
+      // formData.append("swiftCode", swiftCode);
+      // formData.append("routingNumber", routingNumber);
+      // formData.append("amount", usd);
       const response = await axios.post(
         `https://asset-mogul-back.onrender.com/withdrawMoney/${user._id}`,
-        formData
+        dataValue
       );
       console.log(response);
       toast.success(response?.data?.message);
@@ -69,21 +90,24 @@ const Withdraw = () => {
     }
   }
 
-  console.log("Usd", usd);
-  console.log(loading);
   useEffect(() => {
     setLoading(false);
     if (user.length === 0) {
       nav("/");
     }
   }, []);
-  useEffect(() => {
-    if (withdrawal) {
-      setEmptyGateway(false);
-    }
 
-    setLoading(false);
-  }, [emptyGateway, withdrawal]);
+  // useEffect(() => {
+  //   if (withdrawal) {
+  //     setEmptyGateway(false);
+  //   }
+
+  //   setLoading(false);
+  // }, [emptyGateway, withdrawal]);
+
+  useEffect(() => {
+    select == "Crypto" ? setMethod("crypto") : setMethod("bank")
+  }, [select]);
 
   return (
     <>
@@ -100,22 +124,37 @@ const Withdraw = () => {
               onChange={(e) => setSelect(e.target.value)}
             >
               <option value="">Select One...</option>
-              <option value="Bitcoin">Bitcoin</option>
-              <option value="Ethereum">Ethereum</option>
+              <option value="Crypto">Crypto</option>
+              {/* <option value="Ethereum">Ethereum</option> */}
               <option value="Bank_transfer">Bank Transfer</option>
             </select>
           </div>
-          {select === "Bitcoin" && (
+          {select === "Crypto" && (
             <div className="btc_div">
               <div className="btc_address_div">
                 <p>
-                  Bitcoin Address
+                  Wallet Name
+                  <span style={{ color: "rgb(226, 5, 5)" }}>*</span>
+                </p>
+                <input
+                  type="text"
+                  placeholder="eg. bitcoin, ethereum, usdt..."
+                  className="btc_address_input"
+                  value={walletName}
+                  onChange = {(e)=>setWalletName(e.target.value)}
+                />
+              </div>
+              <div className="btc_address_div">
+                <p>
+                  Wallet Address
                   <span style={{ color: "rgb(226, 5, 5)" }}>*</span>
                 </p>
                 <input
                   type="text"
                   placeholder=""
                   className="btc_address_input"
+                  value={walletAddress}
+                  onChange = {(e)=>setWalletAddress(e.target.value)}
                 />
               </div>
               <div className="btc_address_div">
@@ -139,7 +178,7 @@ const Withdraw = () => {
             </div>
           )}
 
-          {select === "Ethereum" && (
+          {/* {select === "Ethereum" && (
             <div className="btc_div">
               <div className="btc_address_div">
                 <p>
@@ -170,34 +209,66 @@ const Withdraw = () => {
                 loading={loading}
               />
             </div>
-          )}
+          )} */}
           {select === "Bank_transfer" && (
             <div className="bank_transfer_div">
               <div className="bank_name_div">
                 <p>
                   Bank Name<span style={{ color: "rgb(226, 5, 5)" }}>*</span>
                 </p>
-                <input type="text" className="bank_name_input" />
+                <input 
+                  type="text" 
+                  value={bankName}
+                  onChange={(e)=>setBankName(e.target.value)}
+                  className="bank_name_input" 
+                />
               </div>
               <div className="bank_name_div">
                 <p>
                   Account Name<span style={{ color: "rgb(226, 5, 5)" }}>*</span>
                 </p>
-                <input type="text" className="bank_name_input" />
+                <input 
+                  type="text" 
+                  value={accountHolderName}
+                  onChange={(e)=>setAccountHolderName(e.target.value)}
+                  className="bank_name_input" 
+                />
               </div>
               <div className="bank_name_div">
                 <p>
                   Account Number
                   <span style={{ color: "rgb(226, 5, 5)" }}>*</span>
                 </p>
-                <input type="number" className="bank_name_input" />
+                <input 
+                  type="number"
+                  value={accountNumber}
+                  onChange={(e)=>setAccountNumber(e.target.value)} 
+                  className="bank_name_input" 
+                />
+              </div>
+              <div className="bank_name_div">
+                <p>
+                  Swift Code
+                  <span style={{ color: "rgb(226, 5, 5)" }}>*</span>
+                </p>
+                <input 
+                  type="number"
+                  value={swiftCode}
+                  onChange={(e)=>setSwiftCode(e.target.value)} 
+                  className="bank_name_input" 
+                />
               </div>
               <div className="bank_name_div">
                 <p>
                   Routine Number
                   <span style={{ color: "rgb(226, 5, 5)" }}>*</span>
                 </p>
-                <input type="number" className="bank_name_input" />
+                <input 
+                  type="number"
+                  value={routingNumber}
+                  onChange={(e)=>setRoutingNumber(e.target.value)} 
+                  className="bank_name_input" 
+                />
               </div>
               <div className="bank_amt_div">
                 <p>
