@@ -69,6 +69,7 @@ const Withdraw = () => {
       toast.success(response?.data?.message);
       toast.success(`Remaining balance: $${response?.data?.remainingBalance}`);
       setLoading(false);
+      nav("/dashboard")
     } catch (err) {
       console.log(err);
       setLoading(false);
