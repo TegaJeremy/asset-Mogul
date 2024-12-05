@@ -84,7 +84,7 @@ const Dashboard = () => {
   async function getTotalWithdrawal() {
     try {
       const response = await axios.get(
-        `https://asset-mogul-back.onrender.com/getTotalWithdrawals/${id}`
+        `https://asset-mogul-back.onrender.com/getTotalWithdraw/${id}`
       );
       console.log(response);
       setTotalWithdrawal(response?.data?.totalWithdrawalAmount);
