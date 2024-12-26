@@ -24,7 +24,7 @@ const ChangePassword = () => {
       setPasswordError(false);
       try {
         const response = await axios.post(
-          `https://asset-mogul-back.onrender.com/changePassword/${userToken?.token}`,
+          `https://assets-mogul-back.onrender.com/changePassword/${userToken?.token}`,
           passBody,
           {
             headers: {

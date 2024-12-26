@@ -100,7 +100,7 @@ function Investments() {
       console.log(parsedInfo._id);
 
       const response = await axios.post(
-        ` https://asset-mogul-back.onrender.com/${investType}/${parsedInfo._id}`,
+        ` https://assets-mogul-back.onrender.com/${investType}/${parsedInfo._id}`,
         data,
         config
       );

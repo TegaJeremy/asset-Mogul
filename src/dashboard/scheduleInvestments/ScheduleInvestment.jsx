@@ -19,7 +19,7 @@ function ScheduleInvestment() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://asset-mogul-back.onrender.com/getScheduledInvestments/${id}`
+        `https://assets-mogul-back.onrender.com/getScheduledInvestments/${id}`
       );
       console.log(response);
       setLoading(false);

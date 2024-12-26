@@ -68,7 +68,7 @@ function Kyc() {
     try {
       console.log(token);
       const response = await axios.post(
-        `https://asset-mogul-back.onrender.com/kycVerification/${token}`,
+        `https://assets-mogul-back.onrender.com/kycVerification/${token}`,
         formData
       );
       console.log(response);

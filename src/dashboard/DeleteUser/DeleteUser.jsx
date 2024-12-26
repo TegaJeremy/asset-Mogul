@@ -28,7 +28,7 @@ const DeleteUser = () => {
         const formData = new FormData();
         formData.append("email", email.trim());
         const response = await axios.put(
-          `https://asset-mogul-back.onrender.com/delete`,
+          `https://assets-mogul-back.onrender.com/delete`,
           { email },
           {
             headers: {
@@ -67,7 +67,7 @@ const DeleteUser = () => {
         const formData = new FormData();
         formData.append("email", email.trim());
         const response = await axios.put(
-          `https://asset-mogul-back.onrender.com/deacvtivateUser`,
+          `https://assets-mogul-back.onrender.com/deacvtivateUser`,
           { email },
           {
             headers: {

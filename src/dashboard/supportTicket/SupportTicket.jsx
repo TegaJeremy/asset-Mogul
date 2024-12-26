@@ -37,7 +37,7 @@ const SupportTicket = () => {
     formData.append("pictures ", p1);
     try {
       const response = await axios.post(
-        `https://asset-mogul-back.onrender.com/createTicket/${user?.id}`,
+        `https://assets-mogul-back.onrender.com/createTicket/${user?.id}`,
         formData
       );
       console.log(response);

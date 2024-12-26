@@ -23,7 +23,7 @@ const AssignProfit = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `https://asset-mogul-back.onrender.com/assignProfit`,
+        `https://assets-mogul-back.onrender.com/assignProfit`,
         { identifier, profit },
         {
           headers: {

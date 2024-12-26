@@ -42,7 +42,7 @@ function ReplyTickets() {
       formData.append("pictures ", p1);
       try {
         const response = await axios.post(
-          `https://asset-mogul-back.onrender.com/replyToTicket/${id}`,
+          `https://assets-mogul-back.onrender.com/replyToTicket/${id}`,
           formData
         );
         console.log(response);

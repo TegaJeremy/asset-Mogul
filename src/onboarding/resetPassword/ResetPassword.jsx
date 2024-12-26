@@ -26,7 +26,7 @@ const ResetPassword = () => {
     msg: "",
   });
 
-  const url = `https://asset-mogul-back.onrender.com/resetPassword/${token}`;
+  const url = `https://assets-mogul-back.onrender.com/resetPassword/${token}`;
 
   const data = { newPassword, confirmNewPassword };
 
