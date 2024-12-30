@@ -15,7 +15,7 @@ function DepositHistory({ user, setDepositHistory }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/DepositHistory/${user._id}`
+        `https://assets-mogul-backend.onrender.com/DepositHistory/${user._id}`
       );
       setLoading(false);
       console.log(response);

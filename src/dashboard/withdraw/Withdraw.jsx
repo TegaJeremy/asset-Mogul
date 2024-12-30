@@ -62,7 +62,7 @@ const Withdraw = () => {
       // formData.append("routingNumber", routingNumber);
       // formData.append("amount", usd);
       const response = await axios.post(
-        `https://assets-mogul-back.onrender.com/withdrawMoney/${user._id}`,
+        `https://assets-mogul-backend.onrender.com/withdrawMoney/${user._id}`,
         dataValue
       );
       console.log(response);

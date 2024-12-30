@@ -44,7 +44,7 @@ const Dashboard = () => {
   async function getTotalDeposit() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getTotalDeposit/${id}`
+        `https://assets-mogul-backend.onrender.com/getTotalDeposit/${id}`
       );
       console.log(response);
       setTotalDeposit(response?.data?.totalDeposit);
@@ -64,7 +64,7 @@ const Dashboard = () => {
   async function getPendingDeposit() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getPendingDeposit/${id}`
+        `https://assets-mogul-backend.onrender.com/getPendingDeposit/${id}`
       );
       console.log(response);
       setPendingDeposit(response?.data?.pendingDeposit);
@@ -84,7 +84,7 @@ const Dashboard = () => {
   async function getLastDeposit() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getLastDeposit/${id}`
+        `https://assets-mogul-backend.onrender.com/getLastDeposit/${id}`
       );
       console.log(response);
       setLastDeposit(response?.data?.amount);
@@ -104,7 +104,7 @@ const Dashboard = () => {
   async function getTotalWithdrawal() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getTotalWithdraw/${id}`
+        `https://assets-mogul-backend.onrender.com/getTotalWithdraw/${id}`
       );
       console.log(response);
       setTotalWithdrawal(response?.data?.totalWithdraw);
@@ -124,7 +124,7 @@ const Dashboard = () => {
   async function getPendingwithdrawl() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getPendingwithdrawl/${id}`
+        `https://assets-mogul-backend.onrender.com/getPendingwithdrawl/${id}`
       );
       console.log(response);
       setPendingWithdrawal(response?.data?.PendingWithdraw);
@@ -144,7 +144,7 @@ const Dashboard = () => {
   async function RejectedWithdral() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/RejectedWithdral/${id}`
+        `https://assets-mogul-backend.onrender.com/RejectedWithdral/${id}`
       );
       console.log(response);
       setRejectedWithdrawal(response?.data?.rejectedWithdraw);
@@ -164,7 +164,7 @@ const Dashboard = () => {
   async function getLastWithdrawal() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getLastWithdrawal/${id}`
+        `https://assets-mogul-backend.onrender.com/getLastWithdrawal/${id}`
       );
       console.log(response);
       setLastWithdrawal(response?.data?.amount);
@@ -184,7 +184,7 @@ const Dashboard = () => {
   async function getIntersetWallet() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getUserIntrestWallet/${id}`
+        `https://assets-mogul-backend.onrender.com/getUserIntrestWallet/${id}`
       );
       console.log(response);
       setnitInterestApi(response.data?.intrestWallet);
@@ -207,7 +207,7 @@ const Dashboard = () => {
   async function getLastInvestment() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getLastInvestment/${id}`
+        `https://assets-mogul-backend.onrender.com/getLastInvestment/${id}`
       );
       console.log(response);
       setLastInvestment(response?.data?.amount);
@@ -227,7 +227,7 @@ const Dashboard = () => {
   async function getRunningInvestment() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getRunningInvestment/${id}`
+        `https://assets-mogul-backend.onrender.com/getRunningInvestment/${id}`
       );
       console.log(response);
       setRunningInvestment(response?.data?.amount);
@@ -247,7 +247,7 @@ const Dashboard = () => {
   async function getCompletedInvestment() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getCompletedInvestment/${id}`
+        `https://assets-mogul-backend.onrender.com/getCompletedInvestment/${id}`
       );
       console.log(response);
       setCompletedInvestment(response?.data?.amount);
@@ -267,7 +267,7 @@ const Dashboard = () => {
   async function getLatestTransaction() {
     try {
       const response = await axios.get(
-        `https://assets-mogul-back.onrender.com/getLatestTransaction/${id}`
+        `https://assets-mogul-backend.onrender.com/getLatestTransaction/${id}`
       );
       console.log(response);
       setlastestTransaction(response.data?.data);

@@ -12,7 +12,7 @@ const PendingWithdrawal = () => {
 
     const getAllpendingWithdrawals = async ()=>{
         try{
-            const response = await axios.get("https://assets-mogul-back.onrender.com/getWithdrawalRequests")
+            const response = await axios.get("https://assets-mogul-backend.onrender.com/getWithdrawalRequests")
             console.log(response)
             setAllPendingWithdrawals(response.data.users)
         } catch(error){
@@ -26,7 +26,7 @@ const PendingWithdrawal = () => {
     },[])
 
     const acceptWithdrawal = async (id)=>{
-        const url = "https://assets-mogul-back.onrender.com/acceptWithdrawal"
+        const url = "https://assets-mogul-backend.onrender.com/acceptWithdrawal"
         const body = {userId: id}
         try{
             setAcceptLoadingId(id)
@@ -42,7 +42,7 @@ const PendingWithdrawal = () => {
     }
 
     const rejectWithdrawal = async (id)=>{
-        const url = "https://assets-mogul-back.onrender.com/rejectWithdrawal"
+        const url = "https://assets-mogul-backend.onrender.com/rejectWithdrawal"
         const body = {userId: id}
         try{
             setRejectloadingId(id)

@@ -50,7 +50,7 @@ const Login = () => {
         formData.append("password", password);
 
         const response = await axios.post(
-          "https://assets-mogul-back.onrender.com/login",
+          "https://assets-mogul-backend.onrender.com/login",
           { emailOrUserName: emailOrUser, password: password }
         );
         console.log(response);

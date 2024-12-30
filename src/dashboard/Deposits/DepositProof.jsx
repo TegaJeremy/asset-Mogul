@@ -37,7 +37,7 @@ function DepositProof() {
           formData.append("proofOfPayment", proof);
           formData.append("amount", depositAmount);
           const response = await axios.post(
-            `https://assets-mogul-back.onrender.com/DepositFunds/${user._id}`,
+            `https://assets-mogul-backend.onrender.com/DepositFunds/${user._id}`,
             formData
           );
           console.log(response);

@@ -12,7 +12,7 @@ const GeneralNumbers = () => {
 
     const getAllUsers = ()=>{
 
-        fetch('https://assets-mogul-back.onrender.com/getAllUsersCount', { method: 'GET' })
+        fetch('https://assets-mogul-backend.onrender.com/getAllUsersCount', { method: 'GET' })
             .then(response => response.json())
             .then(data => setAllUsers(data.totalUsers))
             .catch(error => console.error('Error:', error));
@@ -21,7 +21,7 @@ const GeneralNumbers = () => {
 
     const getKycCount = ()=>{
 
-        fetch('https://assets-mogul-back.onrender.com/unverifiedCount', { method: 'GET' })
+        fetch('https://assets-mogul-backend.onrender.com/unverifiedCount', { method: 'GET' })
             .then(response => response.json())
             .then(data => setKycCount(data.count))
             .catch(error => console.error('Error:', error));
@@ -30,7 +30,7 @@ const GeneralNumbers = () => {
 
     const getTotalDeposit = ()=>{
 
-        fetch('https://assets-mogul-back.onrender.com/getTotalDepositsForAllUsr', { method: 'GET' })
+        fetch('https://assets-mogul-backend.onrender.com/getTotalDepositsForAllUsr', { method: 'GET' })
             .then(response => response.json())
             .then(data => setTotalDeposit(data.totalAmount))
             .catch(error => console.error('Error:', error));
