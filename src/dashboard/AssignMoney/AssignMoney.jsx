@@ -24,6 +24,7 @@ const AssignMoney = () => {
     setLoading(true);
     try {
       const response = await axios.post(
+        
         `https://assets-mogul-backend.onrender.com/assignMoney`,
         { identifier, amount },
         {
