@@ -1,13 +1,12 @@
 .Login_Page {
   width: 100%;
-  height: max-content;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000;
-  /* background: 
-    linear-gradient(to left, rgba(0, 0, 0, 0.903), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.707)), 
-    url('../../assets/starbg.jpeg'); */
+  overflow-y: auto;
+  padding: 2rem 0;
 }
 
 .animation-div {
@@ -16,8 +15,8 @@
   position: absolute;
   top: 0;
   left: 10%;
-
-  animation: move 4s linear infinite;
+  animation: move 4s ease-in-out infinite;
+  z-index: 1;
 }
 
 @media (max-width: 574px) {
@@ -27,19 +26,14 @@
 }
 
 @keyframes move {
-  0% {
+  0%, 100% {
     transform: translateX(-15px) translateY(-2px) rotate(5deg);
-  }
-
-  50% {
-    transform: translateX(15px) translateY(-2px) rotate(-5deg); /* Adjust the distance as needed */
   }
   25% {
     transform: translateX(0) translateY(0) rotate(0deg);
   }
-
-  100% {
-    transform: translateX(-15px) translateY(-2px) rotate(5deg); /* Adjust the distance as needed */
+  50% {
+    transform: translateX(15px) translateY(-2px) rotate(-5deg);
   }
   75% {
     transform: translateX(0) rotate(0deg);
@@ -49,34 +43,34 @@
 .animation-image {
   width: 100%;
   height: 25rem;
+  object-fit: contain;
 }
 
 .Login_PageWrapper {
-  width: 50%;
-  height: 100vh;
-  /* background: #000; */
-  /* background: linear-gradient(#141e30, #243b55); */
+  width: 100%;
+  max-width: 550px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  z-index: 2;
+  position: relative;
 }
 
 .Login_LogoPart {
   width: 10rem;
   max-width: 10rem;
-  /* height: 150px; */
-  /* max-width: 4rem */
-  /* width: 100px; */
-  /* max-height: 10rem; */
-  /* background-color: #03e9f4; */
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
 
-  /* background: aqua;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
+.Login_LogoPart:hover {
+  transform: scale(1.05);
 }
 
 .Login_LogoPart_Img {
-  /* height: 100%; */
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -84,238 +78,259 @@
 
 .LoginCard {
   width: 100%;
-  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #141443; */
 }
 
 .LoginInput_Wrapper {
-  width: 85%;
-  /* height: 90%; */
+  width: 100%;
+  max-width: 500px;
   min-height: 30rem;
-  padding-bottom: 30px;
-  /* background: lightgray; */
-  opacity: 0.8;
-  border-radius: 5px;
-  border: none;
-  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  /* gap: 15px; */
+  gap: 2rem;
   align-items: center;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
 
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-  /* background-color: rgba(0, 0, 0, 0.5); */
+.LoginInput_Wrapper:hover {
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
 }
 
 .LoginForm_Header {
-  width: 85%;
-  height: 8%;
-  /* margin-top: -38px; */
-  /* background: #000; */
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .LoginForm_Header p {
-  color: purple;
-  font-weight: bold;
+  color: #c48140;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .LoginForm_Header p:hover {
-  color: rgb(197, 13, 197);
+  color: #d49552;
 }
 
 .LoginForm_Header span {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
   color: #fff;
+  letter-spacing: -0.5px;
 }
 
 .Login_InputsParts {
-  width: 85%;
-  height: 100%;
-  /* background: blue; */
+  width: 100%;
   display: flex;
-  gap: 15px;
+  gap: 1.5rem;
   flex-direction: column;
-  /* justify-content: center; */
 }
 
 .Login_Inputs_User_Email {
   width: 100%;
-  /* height: 40%; */
   display: flex;
-  margin-top: 1.5rem;
-  /* background: #000; */
   flex-direction: column;
-  justify-content: space-between;
-  /* justify-content: space-around; */
+  gap: 0.75rem;
 }
 
 .Login_Inputs_User_Email p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
   color: #fff;
+  margin: 0;
 }
 
 .Login_Inputs_User_Email input {
   width: 100%;
-  /* height: 60px; */
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   outline: none;
-  /* background: white; */
-  /* background: rgba(0, 0, 0, 0.9); */
-  background-color: transparent;
-  border-bottom: 1px solid white;
+  background: rgba(255, 255, 255, 0.05);
   font-size: 1rem;
   color: white;
-  border-radius: 3px;
-  padding: 15px;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.Login_Inputs_User_Email input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.Login_Inputs_User_Email input:focus {
+  color: #fff;
+  border-color: #c48140;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(196, 129, 64, 0.1);
 }
 
 .login-input-for-input {
   font-size: 1rem;
 }
 
-.Login_Inputs_User_Email input:focus {
-  color: #fff;
-}
-
 .Login_Inputs_User_Email article {
   width: 100%;
   display: flex;
-  gap: 4px;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .Login_Inputs_User_Email article > span {
-  padding-inline: 10px;
-  padding-block: 7px;
+  padding: 0.5rem 1rem;
   background: grey;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 6px;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 11px;
+  transition: all 0.3s ease;
 }
 
 .Login_Inputs_User_Email article > span:hover {
-  transition: all 250ms;
   background: rgb(50, 49, 49);
-  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .Login_Inputs {
   position: relative;
-  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .showPassword {
   cursor: pointer;
   position: absolute;
-  transform: translateY(-50%);
   top: 50%;
-  right: 1%;
-  padding: 6%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: 20;
 }
 
-/* @media screen and (min-width: 825px) {
-  .showPassword {
-    top: 3%;
-  }
-} */
+.showPassword:hover {
+  opacity: 1;
+}
 
 .login-span {
   font-size: 14px;
-  position: absolute;
+  font-weight: 500;
   color: #fff;
-  top: 20%;
-  transition: all ease 3s;
+  letter-spacing: 0.3px;
 }
 
 .Login_Inputs input {
   width: 100%;
   font-size: 1rem;
-  border: none;
-  border-bottom: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   outline: none;
-  padding: 10px;
-  background: transparent;
-  border-radius: 3px;
+  padding: 0.85rem 1rem;
+  padding-right: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.Login_Inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .Login_Inputs input:focus {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid white;
-  font-size: 1rem;
-  color: #fff;
+  border-color: #c48140;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(196, 129, 64, 0.1);
 }
 
 .login-span-focused {
-  color: #c48742;
+  color: #c48140;
   font-weight: 600;
 }
 
-.Login_Inputs input:placeholder-shown {
-  /* font-weight: bold; */
-  /* color: rgba(0, 0, 0, 0); */
-  /* font-size: 13px; */
-}
-
-/* .Login_Inputs input:focus {
-  border: 1px solid black;
-} */
-
 .Login_Buttons {
-  width: 85%;
-
+  width: 100%;
   display: flex;
-  gap: 2px;
+  gap: 1rem;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .Login_Buttons button {
+  width: 100%;
   max-width: 100%;
-  width: 15rem;
-
   min-height: 55px;
-
   padding: 1rem 2rem;
-  margin: 1rem 0;
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 3px;
-  background: rgb(1, 1, 69);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgb(1, 1, 69), rgb(1, 1, 90));
   color: white;
   font-size: 16px;
-  font-weight: bold;
-  margin-top: 4px;
+  font-weight: 600;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.Login_Buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(196, 129, 64, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.Login_Buttons button:hover::before {
+  left: 100%;
 }
 
 .Login_Buttons button:hover {
-  transition: all 250ms;
+  background: linear-gradient(135deg, rgb(118, 78, 2), rgb(150, 100, 10));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 129, 64, 0.4);
 }
 
-.Login_Buttons button:hover {
-  background: transparent;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0),
-    0 0 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(0, 0, 0, 0.5);
-}
 .Login_Buttons button:active {
-  background-color: gold;
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(196, 129, 64, 0.3);
+}
+
+.Login_Buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.Login_Buttons button:disabled:hover {
+  background: linear-gradient(135deg, rgb(1, 1, 69), rgb(1, 1, 90));
+  transform: none;
+  box-shadow: none;
 }
 
 .Login_Buttons button span {
@@ -324,16 +339,19 @@
 }
 
 #clipLoader {
-  top: 18%;
-  left: 42.5%;
+  position: relative !important;
+  display: inline-block !important;
+  top: 0 !important;
+  left: 0 !important;
 }
 
+/* Animated border effects - keeping your original animations but improved */
 .Login_Buttons button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #fff);
+  background: linear-gradient(90deg, transparent, #c48140);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -341,8 +359,7 @@
   0% {
     left: -100%;
   }
-  50%,
-  100% {
+  50%, 100% {
     left: 100%;
   }
 }
@@ -352,7 +369,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #fff);
+  background: linear-gradient(180deg, transparent, #c48140);
   animation: btn-anim2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -361,8 +378,7 @@
   0% {
     top: -100%;
   }
-  50%,
-  100% {
+  50%, 100% {
     top: 100%;
   }
 }
@@ -372,7 +388,7 @@
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #fff);
+  background: linear-gradient(270deg, transparent, #c48140);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -381,8 +397,7 @@
   0% {
     right: -100%;
   }
-  50%,
-  100% {
+  50%, 100% {
     right: 100%;
   }
 }
@@ -392,7 +407,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #fff);
+  background: linear-gradient(360deg, transparent, #c48140);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -401,17 +416,113 @@
   0% {
     bottom: -100%;
   }
-  50%,
-  100% {
+  50%, 100% {
     bottom: 100%;
   }
 }
+
+.Login_Route {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 .Login_Route span {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 500;
   color: #fff;
 }
 
 .span-color {
-  color: #fff;
+  color: gold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.span-color:hover {
+  color: #c48140;
+  text-decoration-thickness: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Login_PageWrapper {
+    width: 95%;
+    padding: 2rem 1rem;
+  }
+
+  .LoginInput_Wrapper {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .Login_InputsParts {
+    gap: 1.25rem;
+  }
+
+  .LoginForm_Header span {
+    font-size: 1.5rem;
+  }
+
+  .Login_LogoPart {
+    width: 8rem;
+    max-width: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Login_Page {
+    padding: 1rem 0;
+  }
+
+  .LoginInput_Wrapper {
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .Login_LogoPart {
+    width: 7rem;
+    max-width: 7rem;
+  }
+
+  .LoginForm_Header span {
+    font-size: 1.35rem;
+  }
+
+  .Login_Buttons button {
+    font-size: 15px;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .Login_Inputs input,
+  .Login_Inputs_User_Email input {
+    font-size: 0.95rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .Login_Inputs input {
+    padding-right: 2.75rem;
+  }
+}
+
+/* Smooth scrollbar */
+.Login_Page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Login_Page::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Login_Page::-webkit-scrollbar-thumb {
+  background: rgba(196, 129, 64, 0.5);
+  border-radius: 4px;
+}
+
+.Login_Page::-webkit-scrollbar-thumb:hover {
+  background: rgba(196, 129, 64, 0.7);
 }
