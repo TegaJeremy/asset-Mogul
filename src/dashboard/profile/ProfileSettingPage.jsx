@@ -48,7 +48,7 @@ function ProfileSettingPage({ user }) {
     setLoading(true);
     try {
       const response = await axios.put(
-        `https://assets-mogul-backend.onrender.com/updateUser/${userId}`,
+        `https://assets-mogilbackend.onrender.com/updateUser/${userId}`,
         formData,
         config
       );

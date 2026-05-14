@@ -70,7 +70,7 @@ const Register = () => {
       };
 
       const response = await axios.post(
-        "https://assets-mogul-backend.onrender.com/registration",
+        "https://assets-mogilbackend.onrender.com/registration",
         dataObj
       );
 

@@ -10,7 +10,7 @@ function PendingTickets() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://assets-mogul-backend.onrender.com/getUsersKYCWithUnverifiedKYC`
+        `https://assets-mogilbackend.onrender.com/getUsersKYCWithUnverifiedKYC`
       );
       console.log(response);
       setLoading(false);

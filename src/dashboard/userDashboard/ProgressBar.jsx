@@ -9,7 +9,7 @@ const ProgressBar = () => {
 
   const getAllUsers = ()=>{
 
-    fetch(`https://assets-mogul-backend.onrender.com/getUserStatusBar/${id}`, { method: 'GET' })
+    fetch(`https://assets-mogilbackend.onrender.com/getUserStatusBar/${id}`, { method: 'GET' })
         .then(response => response.json())
         .then(data => setProgress(data.statusBar))
         .catch(error => console.error('Error:', error));

@@ -146,7 +146,7 @@ const SignUp = () => {
         formData.append("city", city.trim());
         formData.append("profilePicture", "");
         const response = await axios.post(
-          "https://assets-mogul-backend.onrender.com/registration",
+          "https://assets-mogilbackend.onrender.com/registration",
           formData
         );
         console.log(response);

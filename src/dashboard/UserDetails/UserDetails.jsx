@@ -11,7 +11,7 @@ function UserDetails() {
     const getUserDetails = async () => {
       try {
         const response = await axios.get(
-          "https://assets-mogul-backend.onrender.com/getAllUsers"
+          "https://assets-mogilbackend.onrender.com/getAllUsers"
         );
         console.log(response);
         setUsers(response.data);
